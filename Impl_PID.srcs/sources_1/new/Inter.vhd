@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 14.12.2023 08:30:56
+-- Create Date: 12/14/2023 06:12:38 PM
 -- Design Name: 
--- Module Name: Propor - Behavioral
+-- Module Name: Inter - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,26 +31,34 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Propor is
-    Port ( P_en : in STD_LOGIC;
-           Kp : in STD_LOGIC_VECTOR (7 downto 0);
-           P_Error : in STD_LOGIC_VECTOR (15 downto 0);
-           P_Out : out STD_LOGIC_VECTOR (15 downto 0);
+entity Inter is
+    Port ( I_en : in STD_LOGIC;
+           Ki : in STD_LOGIC_VECTOR (7 downto 0);
+           I_error : in STD_LOGIC_VECTOR (15 downto 0);
+           I_out : out STD_LOGIC_VECTOR (15 downto 0);
            clk : in STD_LOGIC;
            rst : in STD_LOGIC);
-end Propor;
+end Inter;
 
-architecture Behavioral of Propor is
+architecture Behavioral of Inter is
+
+signal I_error_sum : unsigned(63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000000";
+signal sumAmm : unsigned(15 downto 0) := "0000000000000000";
 
 begin
-process(clk, P_en) begin
+process(I_en, clk) begin
 if rising_edge(clk) then
-	if P_en = '1' then
-		P_out <= std_logic_vector(unsigned(P_error) * unsigned(kp));
-	end if;
+    if I_en = '1' then
+        I_error_sum <= unsigned(I_error) + I_error_sum;
+        sumAmm <= summAmm + 1;
+    end if;
 end if;
 if rst = '1' then
-    P_out <= "0000000000000000";
+    I_out <= "0000000000000000";
+    I_error_sum <= "0000000000000000000000000000000000000000000000000000000000000000";
+    sumAmm <= "0000000000000000";
+
 end if;
-end process; 
+end process;
+
 end Behavioral;
