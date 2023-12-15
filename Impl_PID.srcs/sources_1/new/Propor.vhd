@@ -44,7 +44,7 @@ end Propor;
 architecture Behavioral of Propor is
 
 begin
-process(clk, P_en) begin
+process(clk, P_en, rst) begin
 if rising_edge(clk) then
 	if P_en = '1' then
 		P_out <= std_logic_vector((unsigned(P_error) * unsigned(kp_num))/unsigned(kp_den));

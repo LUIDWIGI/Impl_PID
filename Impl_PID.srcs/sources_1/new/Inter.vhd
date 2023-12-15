@@ -45,7 +45,7 @@ end Inter;
 architecture Behavioral of Inter is
 
 begin
-process(I_en, clk) begin
+process(I_en, clk, rst) begin
 if rising_edge(clk) then
     if I_en = '1' then
         I_out <= std_logic_vector((unsigned(ki_num)*unsigned(I_error_sum))/(unsigned(sumAmm) * unsigned(ki_den)));

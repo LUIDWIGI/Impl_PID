@@ -38,7 +38,7 @@ entity Deri is
            D_out : out STD_LOGIC_VECTOR (15 downto 0);
            clk : in STD_LOGIC;
            rst : in STD_LOGIC;
-           D_error_diff : STD_LOGIC_VECTOR(63 downto 0);
+           D_error_diff : STD_LOGIC_VECTOR(15 downto 0);
            diffAmm : STD_LOGIC_VECTOR(7 downto 0));
 end Deri;
 
