@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 14.12.2023 08:30:56
+-- Create Date: 15.12.2023 09:08:38
 -- Design Name: 
--- Module Name: Propor - Behavioral
+-- Module Name: Deri - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,29 +31,29 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Propor is
-    Port ( P_en : in STD_LOGIC;
-           Kp_num : in STD_LOGIC_VECTOR (7 downto 0);
-           Kp_den : in STD_LOGIC_VECTOR (7 downto 0);
-           P_Error : in STD_LOGIC_VECTOR (15 downto 0);
-           P_Out : out STD_LOGIC_VECTOR (15 downto 0);
+entity Deri is
+    Port ( D_en : in STD_LOGIC;
+           Kd_num : in STD_LOGIC_VECTOR (7 downto 0);
+           Kd_den : in STD_LOGIC_VECTOR (7 downto 0);
+           D_out : out STD_LOGIC_VECTOR (15 downto 0);
            clk : in STD_LOGIC;
-           rst : in STD_LOGIC);
-end Propor;
+           rst : in STD_LOGIC;
+           D_error_diff : STD_LOGIC_VECTOR(63 downto 0);
+           diffAmm : STD_LOGIC_VECTOR(7 downto 0));
+end Deri;
 
-architecture Behavioral of Propor is
+architecture Behavioral of Deri is
 
 begin
-process(clk, P_en) begin
+process(D_en, clk) begin
+
 if rising_edge(clk) then
-	if P_en = '1' then
-		P_out <= std_logic_vector((unsigned(P_error) * unsigned(kp_num))/unsigned(kp_den));
+	if D_en = '1' then
+		D_out <= std_logic_vector(((unsigned(kd_num) * unsigned(d_error_diff)) * unsigned(diffamm)) / unsigned(kd_den));
+	else
+		D_out <= "00000000000000000";
 	end if;
-	else 
-	P_out <= "0000000000000000";
 end if;
-if rst = '1' then
-    P_out <= "0000000000000000";
-end if;
-end process; 
+
+end process;
 end Behavioral;
