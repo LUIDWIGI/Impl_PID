@@ -51,22 +51,21 @@ signal errordiff_s : integer := 0;
 signal oldError_s : integer := 0;
 signal amm_s : integer := 0;
 
+CONSTANT accumtime : integer := 20;
+
 begin
 process(clk) begin
 if rising_edge(clk) then
 	error_s <= to_integer(unsigned(adcVal)) - TO_INTEGER(unsigned(setpoint));
+	if error_s /= olderror_s then
+		if amm_s < accumtime then
+			errorsum_s <= error_s + errorsum_s;
+			errordiff_s <= error_s - olderror_s;
+			olderror_s <= error_s;
+			error <= std_logic_vector(to_signed(error_s, error_s'length));
+		end if;
+	end if;
 end if;
 end process;
 
-process(error_s, clk) begin
-if rising_edge(clk) then
-	if error_s /= olderror_s then
-		if amm_s < 
-		errorsum_s <= error_s + errorsum_s;
-		errordiff_s <= error_s - olderror_s;
-		if amm_s
-		olderror_s <= error_s;
-	end if;
-end if;	
-end process;
 end Behavioral;
