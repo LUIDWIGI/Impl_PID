@@ -33,10 +33,10 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Propor is
     Port ( P_en : in STD_LOGIC;
-           Kp_num : in STD_LOGIC_VECTOR (7 downto 0);
-           Kp_den : in STD_LOGIC_VECTOR (7 downto 0);
-           P_Error : in STD_LOGIC_VECTOR (15 downto 0);
-           P_Out : out STD_LOGIC_VECTOR (15 downto 0);
+           Kp_num : in unsigned (7 downto 0);
+           Kp_den : in unsigned (7 downto 0);
+           P_Error : in unsigned (15 downto 0);
+           P_Out : out unsigned (15 downto 0);
            clk : in STD_LOGIC;
            rst : in STD_LOGIC);
 end Propor;
@@ -44,10 +44,10 @@ end Propor;
 architecture Behavioral of Propor is
 
 begin
-process(clk, P_en, rst) begin
+process(clk, rst) begin
 if rising_edge(clk) then
 	if P_en = '1' then
-		P_out <= std_logic_vector((unsigned(P_error) * unsigned(kp_num))/unsigned(kp_den));
+		P_out <= P_error * kp_num / kp_den;
 	end if;
 	else 
 	P_out <= "0000000000000000";

@@ -32,39 +32,55 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity Errorcalc is
-    Port ( setPoint : in STD_LOGIC_VECTOR (15 downto 0);
-           adcVal : in STD_LOGIC_VECTOR (15 downto 0);
-           error : out STD_LOGIC_VECTOR (16 downto 0);
-           errorsum : out STD_LOGIC_VECTOR (64 downto 0);
-           errordiff : out STD_LOGIC_VECTOR (16 downto 0);
-           amm : out STD_LOGIC_VECTOR (7 downto 0);
+    Port ( setPoint : in unsigned (15 downto 0);
+           adcVal : in unsigned (15 downto 0);
+           error : out signed (15 downto 0);
+           errorsum : out signed (63 downto 0);
+           errordiff : out signed (15 downto 0);
+           amm : out unsigned (7 downto 0);
            clk : in STD_LOGIC;
            rst : in STD_LOGIC;
-           idAcc: in STD_LOGIC_VECTOR (7 downto 0));
+           idAcc: in unsigned (7 downto 0));
 end Errorcalc;
 
 architecture Behavioral of Errorcalc is
 
-signal error_s : integer := 0;
-signal errorsum_s : integer := 0;
-signal errordiff_s : integer := 0;
-signal oldError_s : integer := 0;
-signal amm_s : integer := 0;
+signal error_b : signed (15 downto 0) := "0000000000000000";
+signal errorsum_b : signed (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000000";
+signal errordiff_b : signed (15 downto 0) := "0000000000000000";
+signal oldError_s : signed (15 downto 0) := "0000000000000000";
+signal oldError_b : signed (15 downto 0) := "0000000000000000";
+signal amm_b : unsigned (7 downto 0) := "00000000";
 
-CONSTANT accumtime : integer := 20;
+CONSTANT accumtime : unsigned (7 downto 0) :=  to_unsigned(20, 8);
 
 begin
-process(clk) begin
+process(clk, rst) begin
 if rising_edge(clk) then
-	error_s <= to_integer(unsigned(adcVal)) - TO_INTEGER(unsigned(setpoint));
-	if error_s /= olderror_s then
-		if amm_s < accumtime then
-			errorsum_s <= error_s + errorsum_s;
-			errordiff_s <= error_s - olderror_s;
-			olderror_s <= error_s;
-			error <= std_logic_vector(to_signed(error_s, error_s'length));
+	error_b <= signed(adcVal) - signed(setpoint);
+	if error_b /= olderror_b then
+		if amm_b < accumtime then
+			errorsum_b <= error_b + errorsum_b;
+			errordiff_b <= error_b - olderror_s;
+			olderror_b <= error_b;
+			olderror_s <= olderror_b;
+			error <= error_b;
+			errorsum <= errorsum_b;
+			errordiff <= errordiff_b;
 		end if;
 	end if;
+end if;
+if rst = '1' then
+    error_b <= "0000000000000000";
+    errordiff_b <= "0000000000000000";
+    olderror_b <= "0000000000000000";
+    olderror_s <= "0000000000000000";
+    error <= "0000000000000000";
+    errordiff <= "0000000000000000";
+    errorsum_b <= "0000000000000000000000000000000000000000000000000000000000000000";
+    errorsum <= "0000000000000000000000000000000000000000000000000000000000000000";
+    amm_b <= "00000000";
+    amm <= "00000000";
 end if;
 end process;
 

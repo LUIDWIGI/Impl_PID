@@ -33,26 +33,29 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Deri is
     Port ( D_en : in STD_LOGIC;
-           Kd_num : in STD_LOGIC_VECTOR (7 downto 0);
-           Kd_den : in STD_LOGIC_VECTOR (7 downto 0);
-           D_out : out STD_LOGIC_VECTOR (15 downto 0);
+           Kd_num : in unsigned (7 downto 0);
+           Kd_den : in unsigned (7 downto 0);
+           D_out : out unsigned (15 downto 0);
            clk : in STD_LOGIC;
            rst : in STD_LOGIC;
-           D_error_diff : STD_LOGIC_VECTOR(15 downto 0);
-           diffAmm : STD_LOGIC_VECTOR(7 downto 0));
+           D_error_diff : in unsigned (15 downto 0);
+           diffAmm : in unsigned (7 downto 0));
 end Deri;
 
 architecture Behavioral of Deri is
 
 begin
-process(D_en, clk) begin
+process(rst, clk) begin
 
 if rising_edge(clk) then
 	if D_en = '1' then
-		D_out <= std_logic_vector(((unsigned(kd_num) * unsigned(d_error_diff)) * unsigned(diffamm)) / unsigned(kd_den));
+		D_out <= ((kd_num * d_error_diff) * diffamm) / kd_den;
 	else
 		D_out <= "00000000000000000";
 	end if;
+end if;
+if rst = '1' then
+    D_out <= "00000000000000000";
 end if;
 
 end process;
