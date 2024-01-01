@@ -1,0 +1,302 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xC2A621A467F94E07",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../Impl_PID.gen/sources_1/bd/impl",
+      "name": "impl",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2"
+    },
+    "design_tree": {
+      "Errorcalc_0": "",
+      "Inter_0": "",
+      "clk_wiz_0": "",
+      "Deri_0": "",
+      "Propor_0": ""
+    },
+    "ports": {
+      "Sysclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "125000000"
+          }
+        }
+      }
+    },
+    "components": {
+      "Errorcalc_0": {
+        "vlnv": "xilinx.com:module_ref:Errorcalc:1.0",
+        "xci_name": "impl_Errorcalc_0_0",
+        "xci_path": "ip\\impl_Errorcalc_0_0\\impl_Errorcalc_0_0.xci",
+        "inst_hier_path": "Errorcalc_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Errorcalc",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "setPoint": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "adcVal": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "error": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "errorsum": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          },
+          "errordiff": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "amm": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "idAcc": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "Inter_0": {
+        "vlnv": "xilinx.com:module_ref:Inter:1.0",
+        "xci_name": "impl_Inter_0_0",
+        "xci_path": "ip\\impl_Inter_0_0\\impl_Inter_0_0.xci",
+        "inst_hier_path": "Inter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Inter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "I_en": {
+            "direction": "I"
+          },
+          "Ki_num": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Ki_den": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "I_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "I_error_sum": {
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          },
+          "sumAmm": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "impl_clk_wiz_0_0",
+        "xci_path": "ip\\impl_clk_wiz_0_0\\impl_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0"
+      },
+      "Deri_0": {
+        "vlnv": "xilinx.com:module_ref:Deri:1.0",
+        "xci_name": "impl_Deri_0_0",
+        "xci_path": "ip\\impl_Deri_0_0\\impl_Deri_0_0.xci",
+        "inst_hier_path": "Deri_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Deri",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "D_en": {
+            "direction": "I"
+          },
+          "Kd_num": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Kd_den": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "D_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "D_error_diff": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "diffAmm": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "Propor_0": {
+        "vlnv": "xilinx.com:module_ref:Propor:1.0",
+        "xci_name": "impl_Propor_0_0",
+        "xci_path": "ip\\impl_Propor_0_0\\impl_Propor_0_0.xci",
+        "inst_hier_path": "Propor_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Propor",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "P_en": {
+            "direction": "I"
+          },
+          "Kp_num": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Kp_den": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "P_Error": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "P_Out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Sysclk_1": {
+        "ports": [
+          "Sysclk",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "Errorcalc_0/clk",
+          "Inter_0/clk",
+          "Deri_0/clk",
+          "Propor_0/clk"
+        ]
+      }
+    }
+  }
+}
