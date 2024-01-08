@@ -50,7 +50,7 @@ if rising_edge(clk) then
     if I_en = '1' then
         I_out <= (ki_num * I_error_sum)/(sumAmm * ki_den);
     else
-    I_out <= "0000000000000000";    
+    	I_out <= "0000000000000000";    
     end if;
 end if;
 if rst = '1' then

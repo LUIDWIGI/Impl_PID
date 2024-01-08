@@ -40,7 +40,11 @@ entity Errorcalc is
            amm : out unsigned (7 downto 0);
            clk : in STD_LOGIC;
            rst : in STD_LOGIC;
-           idAcc: in unsigned (7 downto 0));
+           --idAcc: in unsigned (7 downto 0); I forgor what I wanted to use this for :)
+           enablePID: in unsigned (7 downto 0);
+           D_en: out std_logic;
+           I_en: out std_logic;
+           P_en: out std_logic);
 end Errorcalc;
 
 architecture Behavioral of Errorcalc is
@@ -69,6 +73,41 @@ if rising_edge(clk) then
 			errordiff <= errordiff_b;
 		end if;
 	end if;
+	case enablePID is
+		when "00000001" =>
+			P_en <= '1';
+			I_en <= '0';
+			D_en <= '0';
+		when "00000010" =>
+			P_en <= '0';
+			I_en <= '1';
+			D_en <= '0';
+		when "00000100" =>
+			P_en <= '0';
+			I_en <= '0';
+			D_en <= '1';
+		when "00000011" =>
+			P_en <= '1';
+			I_en <= '1';
+			D_en <= '0';
+		when "00000101" =>
+			P_en <= '1';
+			I_en <= '0';
+			D_en <= '1';
+		when "00000110" =>
+			P_en <= '0';
+			I_en <= '1';
+			D_en <= '1';
+		when "00000111" =>
+			P_en <= '1';
+			I_en <= '1';
+			D_en <= '1';
+		when others => 
+			P_en <= '0';
+			I_en <= '0';
+			D_en <= '0';
+	end case;	
+			
 end if;
 if rst = '1' then
     error_b <= "0000000000000000";
@@ -81,6 +120,9 @@ if rst = '1' then
     errorsum <= "0000000000000000000000000000000000000000000000000000000000000000";
     amm_b <= "00000000";
     amm <= "00000000";
+    P_en <= '0';
+    D_en <= '0';
+    I_en <= '0';
 end if;
 end process;
 

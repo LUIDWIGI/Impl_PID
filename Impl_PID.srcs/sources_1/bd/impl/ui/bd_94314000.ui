@@ -1,21 +1,52 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-704,-946",
+   "Default View_TopLeft":"-487,-78",
    "DisplayMarkDebug":"0",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port port-id_Sysclk -pg 1 -lvl 0 -x -420 -y -320 -defaultsOSRD
-preplace inst Errorcalc_0 -pg 1 -lvl 2 -x -40 -y -470 -defaultsOSRD
-preplace inst Inter_0 -pg 1 -lvl 3 -x 240 -y -450 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -x -270 -y -310 -defaultsOSRD
-preplace inst Deri_0 -pg 1 -lvl 3 -x 240 -y -670 -defaultsOSRD
-preplace inst Propor_0 -pg 1 -lvl 3 -x 240 -y -240 -defaultsOSRD
-preplace netloc clk_wiz_0_clk_out1 1 1 2 -180 -320 100
-preplace netloc Sysclk_1 1 0 1 -400 -320n
-levelinfo -pg 1 -420 -270 -40 240 530
-pagesize -pg 1 -db -bbox -sgen -510 -790 530 200
+preplace port port-id_clk -pg 1 -lvl 0 -x -10 -y 410 -defaultsOSRD
+preplace port port-id_rst -pg 1 -lvl 0 -x -10 -y 430 -defaultsOSRD
+preplace port port-id_PWM -pg 1 -lvl 4 -x 960 -y 440 -defaultsOSRD
+preplace portBus setPoint -pg 1 -lvl 0 -x -10 -y 370 -defaultsOSRD
+preplace portBus Kd_num -pg 1 -lvl 0 -x -10 -y 80 -defaultsOSRD
+preplace portBus Kd_den -pg 1 -lvl 0 -x -10 -y 100 -defaultsOSRD
+preplace portBus Ki_num -pg 1 -lvl 0 -x -10 -y 270 -defaultsOSRD
+preplace portBus Ki_den -pg 1 -lvl 0 -x -10 -y 290 -defaultsOSRD
+preplace portBus ADC -pg 1 -lvl 0 -x -10 -y 390 -defaultsOSRD
+preplace portBus Kp_num -pg 1 -lvl 0 -x -10 -y 560 -defaultsOSRD
+preplace portBus Kp_den -pg 1 -lvl 0 -x -10 -y 580 -defaultsOSRD
+preplace portBus enablePID -pg 1 -lvl 0 -x -10 -y 460 -defaultsOSRD
+preplace inst Deri_0 -pg 1 -lvl 2 -x 550 -y 120 -defaultsOSRD
+preplace inst Propor_0 -pg 1 -lvl 2 -x 550 -y 590 -defaultsOSRD
+preplace inst PWM_0 -pg 1 -lvl 3 -x 820 -y 440 -defaultsOSRD
+preplace inst Inter_0 -pg 1 -lvl 2 -x 550 -y 340 -defaultsOSRD
+preplace inst Errorcalc_0 -pg 1 -lvl 1 -x 170 -y 420 -defaultsOSRD
+preplace netloc ADC_1 1 0 1 20J 390n
+preplace netloc Errorcalc_0_amm 1 1 1 380 180n
+preplace netloc Errorcalc_0_error 1 1 1 360 360n
+preplace netloc Errorcalc_0_errordiff 1 1 1 370 160n
+preplace netloc Errorcalc_0_errorsum 1 1 1 N 380
+preplace netloc Kd_den_1 1 0 2 NJ 100 NJ
+preplace netloc Kd_num_1 1 0 2 NJ 80 NJ
+preplace netloc Ki_den_1 1 0 2 NJ 290 390J
+preplace netloc Ki_num_1 1 0 2 NJ 270 410J
+preplace netloc Kp_den_1 1 0 2 NJ 580 NJ
+preplace netloc Kp_num_1 1 0 2 NJ 560 NJ
+preplace netloc clk_wiz_0_clk_out1 1 0 3 20 540 340 460 NJ
+preplace netloc rst_1 1 0 3 10 550 400 480 NJ
+preplace netloc setPoint_1 1 0 1 20J 370n
+preplace netloc Deri_0_D_out 1 2 1 700 120n
+preplace netloc Inter_0_I_out 1 2 1 690 340n
+preplace netloc Propor_0_P_Out 1 2 1 700 440n
+preplace netloc PWM_0_PWM_sig 1 3 1 N 440
+preplace netloc Errorcalc_0_D_en 1 1 1 320 60n
+preplace netloc Errorcalc_0_I_en 1 1 1 330 280n
+preplace netloc Errorcalc_0_P_en 1 1 1 350 480n
+preplace netloc enablePID_1 1 0 1 N 460
+levelinfo -pg 1 -10 170 550 820 960
+pagesize -pg 1 -db -bbox -sgen -160 -20 1050 700
 "
 }
-
+0

@@ -10,171 +10,69 @@
       "tool_version": "2022.2"
     },
     "design_tree": {
-      "Errorcalc_0": "",
-      "Inter_0": "",
-      "clk_wiz_0": "",
       "Deri_0": "",
-      "Propor_0": ""
+      "Propor_0": "",
+      "PWM_0": "",
+      "Inter_0": "",
+      "Errorcalc_0": ""
     },
     "ports": {
-      "Sysclk": {
-        "type": "clk",
+      "clk": {
+        "direction": "I"
+      },
+      "rst": {
+        "direction": "I"
+      },
+      "setPoint": {
         "direction": "I",
-        "parameters": {
-          "FREQ_HZ": {
-            "value": "125000000"
-          }
-        }
+        "left": "15",
+        "right": "0"
+      },
+      "Kd_num": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "Kd_den": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "Ki_num": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "Ki_den": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "ADC": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "Kp_num": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "Kp_den": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "PWM": {
+        "direction": "O"
+      },
+      "enablePID": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
       }
     },
     "components": {
-      "Errorcalc_0": {
-        "vlnv": "xilinx.com:module_ref:Errorcalc:1.0",
-        "xci_name": "impl_Errorcalc_0_0",
-        "xci_path": "ip\\impl_Errorcalc_0_0\\impl_Errorcalc_0_0.xci",
-        "inst_hier_path": "Errorcalc_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Errorcalc",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "setPoint": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "adcVal": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "error": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "errorsum": {
-            "direction": "O",
-            "left": "63",
-            "right": "0"
-          },
-          "errordiff": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "amm": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "idAcc": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          }
-        }
-      },
-      "Inter_0": {
-        "vlnv": "xilinx.com:module_ref:Inter:1.0",
-        "xci_name": "impl_Inter_0_0",
-        "xci_path": "ip\\impl_Inter_0_0\\impl_Inter_0_0.xci",
-        "inst_hier_path": "Inter_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Inter",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "I_en": {
-            "direction": "I"
-          },
-          "Ki_num": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "Ki_den": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "I_out": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "I_error_sum": {
-            "direction": "I",
-            "left": "63",
-            "right": "0"
-          },
-          "sumAmm": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          }
-        }
-      },
-      "clk_wiz_0": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "impl_clk_wiz_0_0",
-        "xci_path": "ip\\impl_clk_wiz_0_0\\impl_clk_wiz_0_0.xci",
-        "inst_hier_path": "clk_wiz_0"
-      },
       "Deri_0": {
         "vlnv": "xilinx.com:module_ref:Deri:1.0",
         "xci_name": "impl_Deri_0_0",
@@ -279,22 +177,319 @@
             "direction": "I"
           }
         }
+      },
+      "PWM_0": {
+        "vlnv": "xilinx.com:module_ref:PWM:1.0",
+        "xci_name": "impl_PWM_0_0",
+        "xci_path": "ip\\impl_PWM_0_0\\impl_PWM_0_0.xci",
+        "inst_hier_path": "PWM_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PWM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "D_err": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "I_err": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "P_err": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "PWM_sig": {
+            "direction": "O"
+          }
+        }
+      },
+      "Inter_0": {
+        "vlnv": "xilinx.com:module_ref:Inter:1.0",
+        "xci_name": "impl_Inter_0_0",
+        "xci_path": "ip\\impl_Inter_0_0\\impl_Inter_0_0.xci",
+        "inst_hier_path": "Inter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Inter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "I_en": {
+            "direction": "I"
+          },
+          "Ki_num": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Ki_den": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "I_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "I_error_sum": {
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          },
+          "sumAmm": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "Errorcalc_0": {
+        "vlnv": "xilinx.com:module_ref:Errorcalc:1.0",
+        "xci_name": "impl_Errorcalc_0_0",
+        "xci_path": "ip\\impl_Errorcalc_0_0\\impl_Errorcalc_0_0.xci",
+        "inst_hier_path": "Errorcalc_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Errorcalc",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "setPoint": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "adcVal": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "error": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "errorsum": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          },
+          "errordiff": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "amm": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "enablePID": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "D_en": {
+            "direction": "O"
+          },
+          "I_en": {
+            "direction": "O"
+          },
+          "P_en": {
+            "direction": "O"
+          }
+        }
       }
     },
     "nets": {
-      "Sysclk_1": {
+      "ADC_1": {
         "ports": [
-          "Sysclk",
-          "clk_wiz_0/clk_in1"
+          "ADC",
+          "Errorcalc_0/adcVal"
+        ]
+      },
+      "Deri_0_D_out": {
+        "ports": [
+          "Deri_0/D_out",
+          "PWM_0/D_err"
+        ]
+      },
+      "Errorcalc_0_D_en": {
+        "ports": [
+          "Errorcalc_0/D_en",
+          "Deri_0/D_en"
+        ]
+      },
+      "Errorcalc_0_I_en": {
+        "ports": [
+          "Errorcalc_0/I_en",
+          "Inter_0/I_en"
+        ]
+      },
+      "Errorcalc_0_P_en": {
+        "ports": [
+          "Errorcalc_0/P_en",
+          "Propor_0/P_en"
+        ]
+      },
+      "Errorcalc_0_amm": {
+        "ports": [
+          "Errorcalc_0/amm",
+          "Deri_0/diffAmm",
+          "Inter_0/sumAmm"
+        ]
+      },
+      "Errorcalc_0_error": {
+        "ports": [
+          "Errorcalc_0/error",
+          "Propor_0/P_Error"
+        ]
+      },
+      "Errorcalc_0_errordiff": {
+        "ports": [
+          "Errorcalc_0/errordiff",
+          "Deri_0/D_error_diff"
+        ]
+      },
+      "Errorcalc_0_errorsum": {
+        "ports": [
+          "Errorcalc_0/errorsum",
+          "Inter_0/I_error_sum"
+        ]
+      },
+      "Inter_0_I_out": {
+        "ports": [
+          "Inter_0/I_out",
+          "PWM_0/I_err"
+        ]
+      },
+      "Kd_den_1": {
+        "ports": [
+          "Kd_den",
+          "Deri_0/Kd_den"
+        ]
+      },
+      "Kd_num_1": {
+        "ports": [
+          "Kd_num",
+          "Deri_0/Kd_num"
+        ]
+      },
+      "Ki_den_1": {
+        "ports": [
+          "Ki_den",
+          "Inter_0/Ki_den"
+        ]
+      },
+      "Ki_num_1": {
+        "ports": [
+          "Ki_num",
+          "Inter_0/Ki_num"
+        ]
+      },
+      "Kp_den_1": {
+        "ports": [
+          "Kp_den",
+          "Propor_0/Kp_den"
+        ]
+      },
+      "Kp_num_1": {
+        "ports": [
+          "Kp_num",
+          "Propor_0/Kp_num"
+        ]
+      },
+      "PWM_0_PWM_sig": {
+        "ports": [
+          "PWM_0/PWM_sig",
+          "PWM"
+        ]
+      },
+      "Propor_0_P_Out": {
+        "ports": [
+          "Propor_0/P_Out",
+          "PWM_0/P_err"
         ]
       },
       "clk_wiz_0_clk_out1": {
         "ports": [
-          "clk_wiz_0/clk_out1",
-          "Errorcalc_0/clk",
-          "Inter_0/clk",
+          "clk",
           "Deri_0/clk",
-          "Propor_0/clk"
+          "Propor_0/clk",
+          "PWM_0/clk",
+          "Inter_0/clk",
+          "Errorcalc_0/clk"
+        ]
+      },
+      "enablePID_1": {
+        "ports": [
+          "enablePID",
+          "Errorcalc_0/enablePID"
+        ]
+      },
+      "rst_1": {
+        "ports": [
+          "rst",
+          "Deri_0/rst",
+          "Propor_0/rst",
+          "PWM_0/rst",
+          "Inter_0/rst",
+          "Errorcalc_0/rst"
+        ]
+      },
+      "setPoint_1": {
+        "ports": [
+          "setPoint",
+          "Errorcalc_0/setPoint"
         ]
       }
     }
