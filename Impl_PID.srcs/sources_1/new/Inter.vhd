@@ -38,7 +38,7 @@ entity Inter is
            I_out : out unsigned (15 downto 0);
            clk : in STD_LOGIC;
            rst : in STD_LOGIC;
-           I_error_sum : in unsigned(63 downto 0);
+           I_error_sum : in unsigned(31 downto 0);
            sumAmm : in unsigned(7 downto 0));
 end Inter;
 
@@ -48,7 +48,7 @@ begin
 process(clk, rst) begin
 if rising_edge(clk) then
     if I_en = '1' then
-        I_out <= (ki_num * I_error_sum)/(sumAmm * ki_den);
+        I_out <= resize((ki_num * I_error_sum)/(sumAmm * ki_den), 16);
     else
     	I_out <= "0000000000000000";    
     end if;

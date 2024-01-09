@@ -49,13 +49,13 @@ process(rst, clk) begin
 
 if rising_edge(clk) then
 	if D_en = '1' then
-		D_out <= ((kd_num * d_error_diff) * diffamm) / kd_den;
+		D_out <= resize(((kd_num * d_error_diff) * diffamm) / kd_den, 16);
 	else
-		D_out <= "00000000000000000";
+		D_out <= "0000000000000000";
 	end if;
 end if;
 if rst = '1' then
-    D_out <= "00000000000000000";
+    D_out <= "0000000000000000";
 end if;
 
 end process;

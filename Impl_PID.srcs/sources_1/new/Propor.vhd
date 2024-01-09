@@ -47,10 +47,10 @@ begin
 process(clk, rst) begin
 if rising_edge(clk) then
 	if P_en = '1' then
-		P_out <= P_error * kp_num / kp_den;
-	end if;
+		P_out <= resize(P_error * kp_num / kp_den, 16);
 	else 
 	P_out <= "0000000000000000";
+	end if;
 end if;
 if rst = '1' then
     P_out <= "0000000000000000";

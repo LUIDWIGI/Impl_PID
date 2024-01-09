@@ -1,0 +1,368 @@
+
+*** Running vivado
+    with args -log impl_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source impl_wrapper.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-1460] Use of init.tcl in C:/Users/empir/AppData/Roaming/Xilinx/Vivado/init.tcl is deprecated. Please use Vivado_init.tcl 
+Sourcing tcl script 'C:/Users/empir/AppData/Roaming/Xilinx/Vivado/init.tcl'
+source impl_wrapper.tcl -notrace
+WARNING: [Board 49-151] The current board 'tul.com.tw::pynq-z2:1.0' is from a local repo. The vivado install has a corresponding board with version greater than or equal to the local repo board. Please use boards from vivado install to avoid any upgrade/migrate issues
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Jordi/OneDrive - Office 365 Fontys/MO4 IP'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Jordi/OneDrive - Office 365 Fontys/Projects/Year 1/MO3/Digital/bit8_fulladder'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental C:/Fontys/Impl_PID/Impl_PID.srcs/utils_1/imports/synth_1/impl_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Fontys/Impl_PID/Impl_PID.srcs/utils_1/imports/synth_1/impl_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top impl_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10772
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1228.492 ; gain = 408.559
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'impl_wrapper' [C:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/hdl/impl_wrapper.vhd:32]
+INFO: [Synth 8-3491] module 'impl' declared at 'c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:14' bound to instance 'impl_i' of component 'impl' [C:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/hdl/impl_wrapper.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'impl' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:36]
+INFO: [Synth 8-3491] module 'impl_Deri_0_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Deri_0_0_stub.vhdl:5' bound to instance 'Deri_0' of component 'impl_Deri_0_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:151]
+INFO: [Synth 8-638] synthesizing module 'impl_Deri_0_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Deri_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'impl_Errorcalc_0_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Errorcalc_0_0_stub.vhdl:5' bound to instance 'Errorcalc_0' of component 'impl_Errorcalc_0_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'impl_Errorcalc_0_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Errorcalc_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'impl_Inter_0_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Inter_0_0_stub.vhdl:5' bound to instance 'Inter_0' of component 'impl_Inter_0_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'impl_Inter_0_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Inter_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'impl_PWM_0_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_PWM_0_0_stub.vhdl:5' bound to instance 'PWM_0' of component 'impl_PWM_0_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'impl_PWM_0_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_PWM_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'impl_Propor_0_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Propor_0_0_stub.vhdl:5' bound to instance 'Propor_0' of component 'impl_Propor_0_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:197]
+INFO: [Synth 8-638] synthesizing module 'impl_Propor_0_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Propor_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'impl_clk_wiz_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_clk_wiz_0_stub.vhdl:5' bound to instance 'clk_wiz' of component 'impl_clk_wiz_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:207]
+INFO: [Synth 8-638] synthesizing module 'impl_clk_wiz_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_clk_wiz_0_stub.vhdl:15]
+INFO: [Synth 8-256] done synthesizing module 'impl' (0#1) [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'impl_wrapper' (0#1) [C:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/hdl/impl_wrapper.vhd:32]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1320.363 ; gain = 500.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1320.363 ; gain = 500.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1320.363 ; gain = 500.430
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1320.363 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_PWM_0_0/impl_PWM_0_0/impl_PWM_0_0_in_context.xdc] for cell 'impl_i/PWM_0'
+Finished Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_PWM_0_0/impl_PWM_0_0/impl_PWM_0_0_in_context.xdc] for cell 'impl_i/PWM_0'
+Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Propor_0_0/impl_Propor_0_0/impl_Propor_0_0_in_context.xdc] for cell 'impl_i/Propor_0'
+Finished Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Propor_0_0/impl_Propor_0_0/impl_Propor_0_0_in_context.xdc] for cell 'impl_i/Propor_0'
+Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Deri_0_0/impl_Deri_0_0/impl_Deri_0_0_in_context.xdc] for cell 'impl_i/Deri_0'
+Finished Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Deri_0_0/impl_Deri_0_0/impl_Deri_0_0_in_context.xdc] for cell 'impl_i/Deri_0'
+Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0/impl_clk_wiz_0_in_context.xdc] for cell 'impl_i/clk_wiz'
+Finished Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0/impl_clk_wiz_0_in_context.xdc] for cell 'impl_i/clk_wiz'
+Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Inter_0_0/impl_Inter_0_0/impl_Inter_0_0_in_context.xdc] for cell 'impl_i/Inter_0'
+Finished Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Inter_0_0/impl_Inter_0_0/impl_Inter_0_0_in_context.xdc] for cell 'impl_i/Inter_0'
+Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Errorcalc_0_0/impl_Errorcalc_0_0/impl_Errorcalc_0_0_in_context.xdc] for cell 'impl_i/Errorcalc_0'
+Finished Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Errorcalc_0_0/impl_Errorcalc_0_0/impl_Errorcalc_0_0_in_context.xdc] for cell 'impl_i/Errorcalc_0'
+Parsing XDC File [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sws_2bits_tri_i[0]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:4]
+WARNING: [Vivado 12-584] No ports matched 'sws_2bits_tri_i[1]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:5]
+WARNING: [Vivado 12-584] No ports matched 'IIC_1_scl_io'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:8]
+WARNING: [Vivado 12-584] No ports matched 'IIC_1_scl_io'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'IIC_1_sda_io'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'IIC_1_sda_io'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'audio_clk_10MHz'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:12]
+WARNING: [Vivado 12-584] No ports matched 'bclk'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'lrclk'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'sdata_o'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'sdata_i'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'codec_addr[0]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'codec_addr[1]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'btns_4bits_tri_i[0]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'btns_4bits_tri_i[1]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'btns_4bits_tri_i[2]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'btns_4bits_tri_i[3]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'leds_4bits_tri_o[0]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'leds_4bits_tri_o[1]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'leds_4bits_tri_o[2]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'leds_4bits_tri_o[3]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'rgbleds_6bits_tri_o[0]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'rgbleds_6bits_tri_o[1]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'rgbleds_6bits_tri_o[2]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'rgbleds_6bits_tri_o[3]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'rgbleds_6bits_tri_o[4]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'rgbleds_6bits_tri_o[5]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'pmoda_rpi_gpio_tri_io[1]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'pmoda_rpi_gpio_tri_io[0]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'pmoda_rpi_gpio_tri_io[3]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'pmoda_rpi_gpio_tri_io[2]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'pmoda_rpi_gpio_tri_io[5]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'pmoda_rpi_gpio_tri_io[4]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'pmoda_rpi_gpio_tri_io[7]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'pmoda_rpi_gpio_tri_io[6]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'pmoda_rpi_gpio_tri_io[2]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'pmoda_rpi_gpio_tri_io[3]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'pmoda_rpi_gpio_tri_io[6]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'pmoda_rpi_gpio_tri_io[7]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'pmodb_gpio_tri_io[1]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'pmodb_gpio_tri_io[0]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'pmodb_gpio_tri_io[3]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'pmodb_gpio_tri_io[2]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'pmodb_gpio_tri_io[5]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'pmodb_gpio_tri_io[4]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'pmodb_gpio_tri_io[7]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:62]
+WARNING: [Vivado 12-584] No ports matched 'pmodb_gpio_tri_io[6]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'pmodb_gpio_tri_io[2]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'pmodb_gpio_tri_io[3]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:65]
+WARNING: [Vivado 12-584] No ports matched 'pmodb_gpio_tri_io[6]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:66]
+WARNING: [Vivado 12-584] No ports matched 'pmodb_gpio_tri_io[7]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:67]
+WARNING: [Vivado 12-584] No ports matched 'uart_rtl_rxd'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:114]
+WARNING: [Vivado 12-584] No ports matched 'uart_rtl_txd'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:115]
+WARNING: [Vivado 12-584] No ports matched 'arduino_gpio_intr_en_tri_io[0]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:116]
+WARNING: [Vivado 12-584] No ports matched 'arduino_gpio_intr_en_tri_io[1]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:117]
+WARNING: [Vivado 12-584] No ports matched 'arduino_gpio_no_intr_tri_io[0]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:118]
+WARNING: [Vivado 12-584] No ports matched 'pwm0_0_0'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:119]
+WARNING: [Vivado 12-584] No ports matched 'arduino_gpio_no_intr_tri_io[1]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:120]
+WARNING: [Vivado 12-584] No ports matched 'arduino_gpio_no_intr_tri_io[2]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:121]
+WARNING: [Vivado 12-584] No ports matched 'arduino_gpio_no_intr_tri_io[3]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:122]
+WARNING: [Vivado 12-584] No ports matched 'pwm0_1_0'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:123]
+WARNING: [Vivado 12-584] No ports matched 'arduino_gpio_no_intr_tri_io[4]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:124]
+WARNING: [Vivado 12-584] No ports matched 'pwm0_2_0'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:125]
+WARNING: [Vivado 12-584] No ports matched 'arduino_gpio_no_intr_tri_io[5]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:126]
+WARNING: [Vivado 12-584] No ports matched 'arduino_gpio_no_intr_tri_io[6]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:127]
+WARNING: [Vivado 12-584] No ports matched 'arduino_gpio_tri_io[14]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:128]
+WARNING: [Vivado 12-584] No ports matched 'arduino_gpio_tri_io[15]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:129]
+WARNING: [Vivado 12-584] No ports matched 'arduino_gpio_tri_io[16]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:130]
+WARNING: [Vivado 12-584] No ports matched 'arduino_gpio_tri_io[17]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:131]
+WARNING: [Vivado 12-584] No ports matched 'arduino_gpio_tri_io[18]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:132]
+WARNING: [Vivado 12-584] No ports matched 'arduino_gpio_tri_io[19]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:133]
+WARNING: [Vivado 12-584] No ports matched 'arduino_direct_iic_scl_io'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:139]
+WARNING: [Vivado 12-584] No ports matched 'arduino_direct_iic_sda_io'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:140]
+WARNING: [Vivado 12-584] No ports matched 'arduino_direct_iic_scl_io'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:141]
+WARNING: [Vivado 12-584] No ports matched 'arduino_direct_iic_sda_io'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:142]
+WARNING: [Vivado 12-584] No ports matched 'arduino_direct_spi_io1_io'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:145]
+WARNING: [Vivado 12-584] No ports matched 'arduino_direct_spi_io0_io'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:146]
+WARNING: [Vivado 12-584] No ports matched 'arduino_direct_spi_sck_io'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:147]
+WARNING: [Vivado 12-584] No ports matched 'arduino_direct_spi_ss_io'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:148]
+WARNING: [Vivado 12-584] No ports matched 'Vaux1_v_n'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:151]
+WARNING: [Vivado 12-584] No ports matched 'Vaux1_v_p'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:152]
+WARNING: [Vivado 12-584] No ports matched 'Vaux9_v_n'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:153]
+WARNING: [Vivado 12-584] No ports matched 'Vaux9_v_p'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:154]
+WARNING: [Vivado 12-584] No ports matched 'Vaux6_v_n'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:155]
+WARNING: [Vivado 12-584] No ports matched 'Vaux6_v_p'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:156]
+WARNING: [Vivado 12-584] No ports matched 'Vaux15_v_n'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:157]
+WARNING: [Vivado 12-584] No ports matched 'Vaux15_v_p'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:158]
+WARNING: [Vivado 12-584] No ports matched 'Vaux5_v_n'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:159]
+WARNING: [Vivado 12-584] No ports matched 'Vaux5_v_p'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:160]
+WARNING: [Vivado 12-584] No ports matched 'Vaux13_v_n'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:161]
+WARNING: [Vivado 12-584] No ports matched 'Vaux13_v_p'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:162]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_in_clk_p'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:165]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_in_clk_n'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:168]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_in_clk_p'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:169]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_in_data_n[0]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:170]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_in_data_p[0]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:171]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_in_data_n[1]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:172]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_in_data_p[1]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:173]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_in_data_n[2]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:174]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_in_data_p[2]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:175]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:175]
+Finished Parsing XDC File [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/impl_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Parsing XDC File [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1345.801 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1345.801 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1345.801 ; gain = 525.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1345.801 ; gain = 525.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0/impl_clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0/impl_clk_wiz_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for impl_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for impl_i/PWM_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for impl_i/Propor_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for impl_i/Deri_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for impl_i/clk_wiz. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for impl_i/Inter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for impl_i/Errorcalc_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1345.801 ; gain = 525.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1345.801 ; gain = 525.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1345.801 ; gain = 525.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1345.801 ; gain = 525.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1345.801 ; gain = 525.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1345.801 ; gain = 525.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------+----------+
+|      |BlackBox name      |Instances |
++------+-------------------+----------+
+|1     |impl_Deri_0_0      |         1|
+|2     |impl_Errorcalc_0_0 |         1|
+|3     |impl_Inter_0_0     |         1|
+|4     |impl_PWM_0_0       |         1|
+|5     |impl_Propor_0_0    |         1|
+|6     |impl_clk_wiz_0     |         1|
++------+-------------------+----------+
+
+Report Cell Usage: 
++------+------------------------+------+
+|      |Cell                    |Count |
++------+------------------------+------+
+|1     |impl_Deri_0_0_bbox      |     1|
+|2     |impl_Errorcalc_0_0_bbox |     1|
+|3     |impl_Inter_0_0_bbox     |     1|
+|4     |impl_PWM_0_0_bbox       |     1|
+|5     |impl_Propor_0_0_bbox    |     1|
+|6     |impl_clk_wiz_0_bbox     |     1|
+|7     |IBUF                    |    90|
+|8     |OBUF                    |     1|
++------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1345.801 ; gain = 500.430
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1351.133 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1354.816 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 21c77119
+INFO: [Common 17-83] Releasing license: Synthesis
+40 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1354.816 ; gain = 940.477
+INFO: [Common 17-1381] The checkpoint 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/impl_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file impl_wrapper_utilization_synth.rpt -pb impl_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jan  9 16:10:37 2024...
