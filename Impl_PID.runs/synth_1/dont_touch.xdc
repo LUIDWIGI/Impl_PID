@@ -6,22 +6,22 @@
 # Block Designs: bd/impl/impl.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==impl || ORIG_REF_NAME==impl} -quiet] -quiet
 
-# IP: bd/impl/ip/impl_Deri_0_0/impl_Deri_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==impl_Deri_0_0 || ORIG_REF_NAME==impl_Deri_0_0} -quiet] -quiet
+# IP: bd/impl/ip/impl_PWM_0_0/impl_PWM_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==impl_PWM_0_0 || ORIG_REF_NAME==impl_PWM_0_0} -quiet] -quiet
 
 # IP: bd/impl/ip/impl_Propor_0_0/impl_Propor_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==impl_Propor_0_0 || ORIG_REF_NAME==impl_Propor_0_0} -quiet] -quiet
 
-# IP: bd/impl/ip/impl_PWM_0_0/impl_PWM_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==impl_PWM_0_0 || ORIG_REF_NAME==impl_PWM_0_0} -quiet] -quiet
+# IP: bd/impl/ip/impl_Deri_0_0/impl_Deri_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==impl_Deri_0_0 || ORIG_REF_NAME==impl_Deri_0_0} -quiet] -quiet
+
+# IP: bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==impl_clk_wiz_0 || ORIG_REF_NAME==impl_clk_wiz_0} -quiet] -quiet
 
 # IP: bd/impl/ip/impl_Inter_0_0/impl_Inter_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==impl_Inter_0_0 || ORIG_REF_NAME==impl_Inter_0_0} -quiet] -quiet
 
 # IP: bd/impl/ip/impl_Errorcalc_0_0/impl_Errorcalc_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==impl_Errorcalc_0_0 || ORIG_REF_NAME==impl_Errorcalc_0_0} -quiet] -quiet
-
-# IP: bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==impl_clk_wiz_0 || ORIG_REF_NAME==impl_clk_wiz_0} -quiet] -quiet
 
 # XDC: c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/impl_ooc.xdc

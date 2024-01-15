@@ -43,17 +43,20 @@ end Propor;
 
 architecture Behavioral of Propor is
 
+signal numcalc : unsigned(23 downto 0) := (others => '0');
+
 begin
-process(clk, rst) begin
+process(clk) begin
 if rising_edge(clk) then
 	if P_en = '1' then
-		P_out <= resize(P_error * kp_num / kp_den, 16);
+	   numCalc <= P_error * kp_num;
+	   P_out <= resize(numCalc / kp_den, 16);
 	else 
 	P_out <= "0000000000000000";
 	end if;
-end if;
 if rst = '1' then
     P_out <= "0000000000000000";
+end if;
 end if;
 end process; 
 end Behavioral;

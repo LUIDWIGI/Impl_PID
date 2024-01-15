@@ -44,18 +44,23 @@ end Deri;
 
 architecture Behavioral of Deri is
 
+signal numCalc : unsigned(23 DOWNTO 0) := (others => '0');
+signal diffCalc: unsigned(31 downto 0) := (others => '0');
+
 begin
-process(rst, clk) begin
+process(clk) begin
 
 if rising_edge(clk) then
 	if D_en = '1' then
-		D_out <= resize(((kd_num * d_error_diff) * diffamm) / kd_den, 16);
+	   numCalc <= kd_num * d_error_diff;
+	   diffCalc <= diffAmm * numCalc;
+		D_out <= resize(diffCalc / kd_den, 16);
 	else
 		D_out <= "0000000000000000";
 	end if;
-end if;
 if rst = '1' then
     D_out <= "0000000000000000";
+end if;
 end if;
 
 end process;

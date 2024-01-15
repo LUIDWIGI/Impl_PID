@@ -31,57 +31,57 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10772
+INFO: [Synth 8-7075] Helper process launched with PID 26104
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1228.492 ; gain = 408.559
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1227.168 ; gain = 407.059
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'impl_wrapper' [C:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/hdl/impl_wrapper.vhd:32]
 INFO: [Synth 8-3491] module 'impl' declared at 'c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:14' bound to instance 'impl_i' of component 'impl' [C:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/hdl/impl_wrapper.vhd:51]
 INFO: [Synth 8-638] synthesizing module 'impl' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:36]
-INFO: [Synth 8-3491] module 'impl_Deri_0_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Deri_0_0_stub.vhdl:5' bound to instance 'Deri_0' of component 'impl_Deri_0_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:151]
-INFO: [Synth 8-638] synthesizing module 'impl_Deri_0_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Deri_0_0_stub.vhdl:19]
-INFO: [Synth 8-3491] module 'impl_Errorcalc_0_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Errorcalc_0_0_stub.vhdl:5' bound to instance 'Errorcalc_0' of component 'impl_Errorcalc_0_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'impl_Errorcalc_0_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Errorcalc_0_0_stub.vhdl:23]
-INFO: [Synth 8-3491] module 'impl_Inter_0_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Inter_0_0_stub.vhdl:5' bound to instance 'Inter_0' of component 'impl_Inter_0_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:177]
-INFO: [Synth 8-638] synthesizing module 'impl_Inter_0_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Inter_0_0_stub.vhdl:19]
-INFO: [Synth 8-3491] module 'impl_PWM_0_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_PWM_0_0_stub.vhdl:5' bound to instance 'PWM_0' of component 'impl_PWM_0_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:188]
-INFO: [Synth 8-638] synthesizing module 'impl_PWM_0_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_PWM_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'impl_Propor_0_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Propor_0_0_stub.vhdl:5' bound to instance 'Propor_0' of component 'impl_Propor_0_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:197]
-INFO: [Synth 8-638] synthesizing module 'impl_Propor_0_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_Propor_0_0_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'impl_clk_wiz_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_clk_wiz_0_stub.vhdl:5' bound to instance 'clk_wiz' of component 'impl_clk_wiz_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:207]
-INFO: [Synth 8-638] synthesizing module 'impl_clk_wiz_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-32032-aSUS-G14-Jordi/realtime/impl_clk_wiz_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'impl_Deri_0_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-26200-aSUS-G14-Jordi/realtime/impl_Deri_0_0_stub.vhdl:5' bound to instance 'Deri_0' of component 'impl_Deri_0_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:151]
+INFO: [Synth 8-638] synthesizing module 'impl_Deri_0_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-26200-aSUS-G14-Jordi/realtime/impl_Deri_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'impl_Errorcalc_0_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-26200-aSUS-G14-Jordi/realtime/impl_Errorcalc_0_0_stub.vhdl:5' bound to instance 'Errorcalc_0' of component 'impl_Errorcalc_0_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'impl_Errorcalc_0_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-26200-aSUS-G14-Jordi/realtime/impl_Errorcalc_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'impl_Inter_0_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-26200-aSUS-G14-Jordi/realtime/impl_Inter_0_0_stub.vhdl:5' bound to instance 'Inter_0' of component 'impl_Inter_0_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'impl_Inter_0_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-26200-aSUS-G14-Jordi/realtime/impl_Inter_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'impl_PWM_0_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-26200-aSUS-G14-Jordi/realtime/impl_PWM_0_0_stub.vhdl:5' bound to instance 'PWM_0' of component 'impl_PWM_0_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'impl_PWM_0_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-26200-aSUS-G14-Jordi/realtime/impl_PWM_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'impl_Propor_0_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-26200-aSUS-G14-Jordi/realtime/impl_Propor_0_0_stub.vhdl:5' bound to instance 'Propor_0' of component 'impl_Propor_0_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:197]
+INFO: [Synth 8-638] synthesizing module 'impl_Propor_0_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-26200-aSUS-G14-Jordi/realtime/impl_Propor_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'impl_clk_wiz_0' declared at 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-26200-aSUS-G14-Jordi/realtime/impl_clk_wiz_0_stub.vhdl:5' bound to instance 'clk_wiz' of component 'impl_clk_wiz_0' [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:207]
+INFO: [Synth 8-638] synthesizing module 'impl_clk_wiz_0' [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/.Xil/Vivado-26200-aSUS-G14-Jordi/realtime/impl_clk_wiz_0_stub.vhdl:15]
 INFO: [Synth 8-256] done synthesizing module 'impl' (0#1) [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/synth/impl.vhd:36]
 INFO: [Synth 8-256] done synthesizing module 'impl_wrapper' (0#1) [C:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/hdl/impl_wrapper.vhd:32]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1320.363 ; gain = 500.430
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1318.590 ; gain = 498.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1320.363 ; gain = 500.430
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1318.590 ; gain = 498.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1320.363 ; gain = 500.430
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1318.590 ; gain = 498.480
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1320.363 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1318.590 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_PWM_0_0/impl_PWM_0_0/impl_PWM_0_0_in_context.xdc] for cell 'impl_i/PWM_0'
 Finished Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_PWM_0_0/impl_PWM_0_0/impl_PWM_0_0_in_context.xdc] for cell 'impl_i/PWM_0'
+Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0/impl_clk_wiz_0_in_context.xdc] for cell 'impl_i/clk_wiz'
+Finished Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0/impl_clk_wiz_0_in_context.xdc] for cell 'impl_i/clk_wiz'
+Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Errorcalc_0_0/impl_Errorcalc_0_0/impl_Errorcalc_0_0_in_context.xdc] for cell 'impl_i/Errorcalc_0'
+Finished Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Errorcalc_0_0/impl_Errorcalc_0_0/impl_Errorcalc_0_0_in_context.xdc] for cell 'impl_i/Errorcalc_0'
 Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Propor_0_0/impl_Propor_0_0/impl_Propor_0_0_in_context.xdc] for cell 'impl_i/Propor_0'
 Finished Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Propor_0_0/impl_Propor_0_0/impl_Propor_0_0_in_context.xdc] for cell 'impl_i/Propor_0'
 Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Deri_0_0/impl_Deri_0_0/impl_Deri_0_0_in_context.xdc] for cell 'impl_i/Deri_0'
 Finished Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Deri_0_0/impl_Deri_0_0/impl_Deri_0_0_in_context.xdc] for cell 'impl_i/Deri_0'
-Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0/impl_clk_wiz_0_in_context.xdc] for cell 'impl_i/clk_wiz'
-Finished Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0/impl_clk_wiz_0_in_context.xdc] for cell 'impl_i/clk_wiz'
 Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Inter_0_0/impl_Inter_0_0/impl_Inter_0_0_in_context.xdc] for cell 'impl_i/Inter_0'
 Finished Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Inter_0_0/impl_Inter_0_0/impl_Inter_0_0_in_context.xdc] for cell 'impl_i/Inter_0'
-Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Errorcalc_0_0/impl_Errorcalc_0_0/impl_Errorcalc_0_0_in_context.xdc] for cell 'impl_i/Errorcalc_0'
-Finished Parsing XDC File [c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_Errorcalc_0_0/impl_Errorcalc_0_0/impl_Errorcalc_0_0_in_context.xdc] for cell 'impl_i/Errorcalc_0'
 Parsing XDC File [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc]
 WARNING: [Vivado 12-584] No ports matched 'sws_2bits_tri_i[0]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:4]
 WARNING: [Vivado 12-584] No ports matched 'sws_2bits_tri_i[1]'. [C:/Fontys/Impl_PID/Impl_PID.srcs/constrs_1/imports/constraints/top.xdc:5]
@@ -190,23 +190,23 @@ Parsing XDC File [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1345.801 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1318.590 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1345.801 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1318.590 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1318.590 ; gain = 498.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1318.590 ; gain = 498.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -215,16 +215,16 @@ Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/F
 Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0/impl_clk_wiz_0_in_context.xdc, line 4).
 Applied set_property KEEP_HIERARCHY = SOFT for impl_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for impl_i/PWM_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for impl_i/clk_wiz. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for impl_i/Errorcalc_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for impl_i/Propor_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for impl_i/Deri_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for impl_i/clk_wiz. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for impl_i/Inter_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for impl_i/Errorcalc_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1318.590 ; gain = 498.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1318.590 ; gain = 498.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -247,25 +247,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1318.590 ; gain = 498.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1318.590 ; gain = 498.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1318.590 ; gain = 498.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1318.867 ; gain = 498.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -283,37 +283,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1323.660 ; gain = 503.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1323.660 ; gain = 503.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1323.660 ; gain = 503.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1323.660 ; gain = 503.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1323.660 ; gain = 503.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1323.660 ; gain = 503.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -345,16 +345,16 @@ Report Cell Usage:
 |8     |OBUF                    |     1|
 +------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1323.660 ; gain = 503.551
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1345.801 ; gain = 500.430
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1345.801 ; gain = 525.867
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1323.660 ; gain = 503.551
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1323.660 ; gain = 503.551
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1351.133 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1335.691 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1354.816 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1344.336 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -362,7 +362,7 @@ Synth Design complete, checksum: 21c77119
 INFO: [Common 17-83] Releasing license: Synthesis
 40 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1354.816 ; gain = 940.477
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1344.336 ; gain = 930.145
 INFO: [Common 17-1381] The checkpoint 'C:/Fontys/Impl_PID/Impl_PID.runs/synth_1/impl_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file impl_wrapper_utilization_synth.rpt -pb impl_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jan  9 16:10:37 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 10 14:02:02 2024...

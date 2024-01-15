@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Tue Jan  9 16:09:06 2024
+--Date        : Wed Jan 10 14:00:36 2024
 --Host        : aSUS-G14-Jordi running 64-bit major release  (build 9200)
 --Command     : generate_target impl.bd
 --Design      : impl
@@ -44,6 +44,30 @@ architecture STRUCTURE of impl is
     PWM_sig : out STD_LOGIC
   );
   end component impl_PWM_0_0;
+  component impl_clk_wiz_0 is
+  port (
+    reset : in STD_LOGIC;
+    clk_in1 : in STD_LOGIC;
+    clk_out1 : out STD_LOGIC;
+    locked : out STD_LOGIC
+  );
+  end component impl_clk_wiz_0;
+  component impl_Errorcalc_0_0 is
+  port (
+    setPoint : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    adcVal : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    error : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    errorsum : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    errordiff : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    amm : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    clk : in STD_LOGIC;
+    rst : in STD_LOGIC;
+    enablePID : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    D_en : out STD_LOGIC;
+    I_en : out STD_LOGIC;
+    P_en : out STD_LOGIC
+  );
+  end component impl_Errorcalc_0_0;
   component impl_Propor_0_0 is
   port (
     P_en : in STD_LOGIC;
@@ -67,14 +91,6 @@ architecture STRUCTURE of impl is
     diffAmm : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component impl_Deri_0_0;
-  component impl_clk_wiz_0 is
-  port (
-    reset : in STD_LOGIC;
-    clk_in1 : in STD_LOGIC;
-    clk_out1 : out STD_LOGIC;
-    locked : out STD_LOGIC
-  );
-  end component impl_clk_wiz_0;
   component impl_Inter_0_0 is
   port (
     I_en : in STD_LOGIC;
@@ -87,22 +103,6 @@ architecture STRUCTURE of impl is
     sumAmm : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component impl_Inter_0_0;
-  component impl_Errorcalc_0_0 is
-  port (
-    setPoint : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    adcVal : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    error : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    errorsum : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    errordiff : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    amm : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    clk : in STD_LOGIC;
-    rst : in STD_LOGIC;
-    enablePID : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    D_en : out STD_LOGIC;
-    I_en : out STD_LOGIC;
-    P_en : out STD_LOGIC
-  );
-  end component impl_Errorcalc_0_0;
   signal ADC_1 : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal Deri_0_D_out : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal Errorcalc_0_D_en : STD_LOGIC;
@@ -128,12 +128,12 @@ architecture STRUCTURE of impl is
   signal setPoint_1 : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal sys_clock_1 : STD_LOGIC;
   signal NLW_clk_wiz_locked_UNCONNECTED : STD_LOGIC;
-  attribute x_interface_info : string;
-  attribute x_interface_info of reset_rtl : signal is "xilinx.com:signal:reset:1.0 RST.RESET_RTL RST";
-  attribute x_interface_parameter : string;
-  attribute x_interface_parameter of reset_rtl : signal is "XIL_INTERFACENAME RST.RESET_RTL, INSERT_VIP 0, POLARITY ACTIVE_HIGH";
-  attribute x_interface_info of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
-  attribute x_interface_parameter of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN impl_sys_clock, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_INFO : string;
+  attribute X_INTERFACE_INFO of reset_rtl : signal is "xilinx.com:signal:reset:1.0 RST.RESET_RTL RST";
+  attribute X_INTERFACE_PARAMETER : string;
+  attribute X_INTERFACE_PARAMETER of reset_rtl : signal is "XIL_INTERFACENAME RST.RESET_RTL, INSERT_VIP 0, POLARITY ACTIVE_HIGH";
+  attribute X_INTERFACE_INFO of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
+  attribute X_INTERFACE_PARAMETER of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN impl_sys_clock, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
 begin
   ADC_1(15 downto 0) <= ADC(15 downto 0);
   Kd_den_1(7 downto 0) <= Kd_den(7 downto 0);

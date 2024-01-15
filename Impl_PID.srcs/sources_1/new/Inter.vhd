@@ -44,18 +44,23 @@ end Inter;
 
 architecture Behavioral of Inter is
 
+signal numCalc : unsigned(39 downto 0) := (others => '0');
+signal denCalc : unsigned(15 downto 0) := (others => '0');
+
 begin
-process(clk, rst) begin
+process(clk) begin
 if rising_edge(clk) then
     if I_en = '1' then
-        I_out <= resize((ki_num * I_error_sum)/(sumAmm * ki_den), 16);
+        numCalc <= ki_num * I_error_sum;
+        denCalc <= sumAmm * ki_den;
+        I_out <= resize(numCalc / denCalc, 16);
     else
     	I_out <= "0000000000000000";    
     end if;
-end if;
 if rst = '1' then
     I_out <= "0000000000000000";
 
+end if;
 end if;
 end process;
 
