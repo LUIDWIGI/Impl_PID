@@ -1,8 +1,8 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Wed Jan 10 14:00:36 2024
---Host        : aSUS-G14-Jordi running 64-bit major release  (build 9200)
+--Date        : Tue Jan 16 13:05:26 2024
+--Host        : favorietedikzak running 64-bit major release  (build 9200)
 --Command     : generate_target impl.bd
 --Design      : impl
 --Purpose     : IP block netlist
@@ -34,16 +34,6 @@ entity impl is
 end impl;
 
 architecture STRUCTURE of impl is
-  component impl_PWM_0_0 is
-  port (
-    D_err : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    I_err : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    P_err : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    clk : in STD_LOGIC;
-    rst : in STD_LOGIC;
-    PWM_sig : out STD_LOGIC
-  );
-  end component impl_PWM_0_0;
   component impl_clk_wiz_0 is
   port (
     reset : in STD_LOGIC;
@@ -68,17 +58,16 @@ architecture STRUCTURE of impl is
     P_en : out STD_LOGIC
   );
   end component impl_Errorcalc_0_0;
-  component impl_Propor_0_0 is
+  component impl_PWM_0_0 is
   port (
-    P_en : in STD_LOGIC;
-    Kp_num : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Kp_den : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    P_Error : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    P_Out : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    D_err : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    I_err : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    P_err : in STD_LOGIC_VECTOR ( 15 downto 0 );
     clk : in STD_LOGIC;
-    rst : in STD_LOGIC
+    rst : in STD_LOGIC;
+    PWM_sig : out STD_LOGIC
   );
-  end component impl_Propor_0_0;
+  end component impl_PWM_0_0;
   component impl_Deri_0_0 is
   port (
     D_en : in STD_LOGIC;
@@ -103,6 +92,17 @@ architecture STRUCTURE of impl is
     sumAmm : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component impl_Inter_0_0;
+  component impl_Propor_0_0 is
+  port (
+    P_en : in STD_LOGIC;
+    Kp_num : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Kp_den : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    P_Error : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    P_Out : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    clk : in STD_LOGIC;
+    rst : in STD_LOGIC
+  );
+  end component impl_Propor_0_0;
   signal ADC_1 : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal Deri_0_D_out : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal Errorcalc_0_D_en : STD_LOGIC;

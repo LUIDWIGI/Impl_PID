@@ -33,8 +33,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Inter is
     Port ( I_en : in STD_LOGIC;
-           Ki_num : in unsigned (7 downto 0);
-           Ki_den : in unsigned (7 downto 0);
+           Ki_num : in std_logic_vector (7 downto 0);
+           Ki_den : in std_logic_vector (7 downto 0);
            I_out : out unsigned (15 downto 0);
            clk : in STD_LOGIC;
            rst : in STD_LOGIC;
@@ -51,8 +51,8 @@ begin
 process(clk) begin
 if rising_edge(clk) then
     if I_en = '1' then
-        numCalc <= ki_num * I_error_sum;
-        denCalc <= sumAmm * ki_den;
+        numCalc <= unsigned(ki_num) * I_error_sum;
+        denCalc <= sumAmm * unsigned(ki_den);
         I_out <= resize(numCalc / denCalc, 16);
     else
     	I_out <= "0000000000000000";    

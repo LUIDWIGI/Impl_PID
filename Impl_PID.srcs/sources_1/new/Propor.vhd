@@ -33,8 +33,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Propor is
     Port ( P_en : in STD_LOGIC;
-           Kp_num : in unsigned (7 downto 0);
-           Kp_den : in unsigned (7 downto 0);
+           Kp_num : in std_logic_vector (7 downto 0);
+           Kp_den : in std_logic_vector (7 downto 0);
            P_Error : in unsigned (15 downto 0);
            P_Out : out unsigned (15 downto 0);
            clk : in STD_LOGIC;
@@ -49,8 +49,8 @@ begin
 process(clk) begin
 if rising_edge(clk) then
 	if P_en = '1' then
-	   numCalc <= P_error * kp_num;
-	   P_out <= resize(numCalc / kp_den, 16);
+	   numCalc <= P_error * unsigned(kp_num);
+	   P_out <= resize(numCalc / unsigned(kp_den), 16);
 	else 
 	P_out <= "0000000000000000";
 	end if;

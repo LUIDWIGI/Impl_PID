@@ -33,8 +33,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Deri is
     Port ( D_en : in STD_LOGIC;
-           Kd_num : in unsigned (7 downto 0);
-           Kd_den : in unsigned (7 downto 0);
+           Kd_num : in std_logic_vector (7 downto 0);
+           Kd_den : in std_logic_vector (7 downto 0);
            D_out : out unsigned (15 downto 0);
            clk : in STD_LOGIC;
            rst : in STD_LOGIC;
@@ -52,9 +52,9 @@ process(clk) begin
 
 if rising_edge(clk) then
 	if D_en = '1' then
-	   numCalc <= kd_num * d_error_diff;
+	   numCalc <= unsigned(kd_num) * d_error_diff;
 	   diffCalc <= diffAmm * numCalc;
-		D_out <= resize(diffCalc / kd_den, 16);
+		D_out <= resize(diffCalc / unsigned(kd_den), 16);
 	else
 		D_out <= "0000000000000000";
 	end if;
