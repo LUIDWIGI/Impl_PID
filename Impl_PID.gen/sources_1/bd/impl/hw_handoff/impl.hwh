@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 16 13:05:26 2024" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 17 13:51:56 2024" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="impl" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -7,10 +7,10 @@
     <PORT DIR="I" NAME="rst" SIGIS="undef" SIGNAME="External_Ports_rst">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Errorcalc_0" PORT="rst"/>
-        <CONNECTION INSTANCE="PWM_0" PORT="rst"/>
         <CONNECTION INSTANCE="Deri_0" PORT="rst"/>
         <CONNECTION INSTANCE="Inter_0" PORT="rst"/>
         <CONNECTION INSTANCE="Propor_0" PORT="rst"/>
+        <CONNECTION INSTANCE="PWM_0" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="15" NAME="setPoint" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_setPoint">
@@ -930,10 +930,10 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Errorcalc_0" PORT="clk"/>
-            <CONNECTION INSTANCE="PWM_0" PORT="clk"/>
             <CONNECTION INSTANCE="Deri_0" PORT="clk"/>
             <CONNECTION INSTANCE="Inter_0" PORT="clk"/>
             <CONNECTION INSTANCE="Propor_0" PORT="clk"/>
+            <CONNECTION INSTANCE="PWM_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef"/>

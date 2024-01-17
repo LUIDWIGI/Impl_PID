@@ -1,9 +1,9 @@
 vhdl xil_defaultlib  \
-"../../../bd/impl/ip/impl_PWM_0_0/sim/impl_PWM_0_0.vhd" \
 "../../../bd/impl/ip/impl_Errorcalc_0_0/sim/impl_Errorcalc_0_0.vhd" \
-"../../../bd/impl/ip/impl_Propor_0_0/sim/impl_Propor_0_0.vhd" \
+"../../../bd/impl/ip/impl_PWM_0_0/sim/impl_PWM_0_0.vhd" \
 "../../../bd/impl/ip/impl_Deri_0_0/sim/impl_Deri_0_0.vhd" \
 "../../../bd/impl/ip/impl_Inter_0_0/sim/impl_Inter_0_0.vhd" \
+"../../../bd/impl/ip/impl_Propor_0_0/sim/impl_Propor_0_0.vhd" \
 "../../../bd/impl/sim/impl.vhd" \
 
 nosort

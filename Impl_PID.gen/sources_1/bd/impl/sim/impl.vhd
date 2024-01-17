@@ -1,8 +1,8 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Tue Jan 16 13:05:26 2024
---Host        : favorietedikzak running 64-bit major release  (build 9200)
+--Date        : Wed Jan 17 13:51:56 2024
+--Host        : aSUS-G14-Jordi running 64-bit major release  (build 9200)
 --Command     : generate_target impl.bd
 --Design      : impl
 --Purpose     : IP block netlist
@@ -58,16 +58,6 @@ architecture STRUCTURE of impl is
     P_en : out STD_LOGIC
   );
   end component impl_Errorcalc_0_0;
-  component impl_PWM_0_0 is
-  port (
-    D_err : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    I_err : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    P_err : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    clk : in STD_LOGIC;
-    rst : in STD_LOGIC;
-    PWM_sig : out STD_LOGIC
-  );
-  end component impl_PWM_0_0;
   component impl_Deri_0_0 is
   port (
     D_en : in STD_LOGIC;
@@ -103,6 +93,16 @@ architecture STRUCTURE of impl is
     rst : in STD_LOGIC
   );
   end component impl_Propor_0_0;
+  component impl_PWM_0_0 is
+  port (
+    D_err : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    I_err : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    P_err : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    clk : in STD_LOGIC;
+    rst : in STD_LOGIC;
+    PWM_sig : out STD_LOGIC
+  );
+  end component impl_PWM_0_0;
   signal ADC_1 : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal Deri_0_D_out : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal Errorcalc_0_D_en : STD_LOGIC;
