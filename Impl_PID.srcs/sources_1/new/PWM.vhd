@@ -37,9 +37,9 @@ entity PWM is
 	pwm_freq : integer := 100_000;
 	bits_resolution : integer := 12);
 	
-    Port ( D_err : in unsigned (15 downto 0);
-           I_err : in unsigned (15 downto 0);
-           P_err : in unsigned (15 downto 0);
+    Port ( D_err : in std_logic_vector (15 downto 0);
+           I_err : in std_logic_vector (15 downto 0);
+           P_err : in std_logic_vector (15 downto 0);
            clk : in STD_LOGIC;
            rst : in STD_LOGIC;
            PWM_sig : out STD_LOGIC);
@@ -55,15 +55,10 @@ signal pwmerror: integer := 0;
 signal isRising: STD_LOGIC := '0';
 
 begin
-process(rst, clk) begin
-
-if (rst = '1') then
-	counter <= 0;
-	PWM_sig <= '0';
-end if;
+process(clk) begin
 
 if rising_edge(clk) then
-	toterror <= to_integer(D_err + I_err + P_err);
+	toterror <= to_integer(unsigned(D_err) + unsigned(I_err) + unsigned(P_err));
 	if toterror > 4095 then
 		pwmerror <= 4095;
 	elsif toterror < 0 then
@@ -88,6 +83,10 @@ if rising_edge(clk) then
 	
 	halfduty <= pwmerror * period / (2**bits_resolution) / 2;
 	
+	if (rst = '1') then
+		counter <= 0;
+		PWM_sig <= '0';
+	end if;
 end if;
 end process;
 end Behavioral;

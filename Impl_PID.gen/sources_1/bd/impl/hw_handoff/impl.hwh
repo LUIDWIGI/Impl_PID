@@ -1,18 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 17 13:51:56 2024" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jan 18 11:45:22 2024" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="impl" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" NAME="rst" SIGIS="undef" SIGNAME="External_Ports_rst">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="Errorcalc_0" PORT="rst"/>
-        <CONNECTION INSTANCE="Deri_0" PORT="rst"/>
-        <CONNECTION INSTANCE="Inter_0" PORT="rst"/>
-        <CONNECTION INSTANCE="Propor_0" PORT="rst"/>
-        <CONNECTION INSTANCE="PWM_0" PORT="rst"/>
-      </CONNECTIONS>
-    </PORT>
+    <PORT DIR="I" NAME="rst" SIGIS="undef"/>
     <PORT DIR="I" LEFT="15" NAME="setPoint" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_setPoint">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Errorcalc_0" PORT="setPoint"/>
@@ -105,14 +97,14 @@
             <CONNECTION INSTANCE="PWM_0" PORT="D_err"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
+        <PORT CLKFREQUENCY="50000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="sim_clk_gen_0_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+            <CONNECTION INSTANCE="sim_clk_gen_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="sim_clk_gen_0_sync_rst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+            <CONNECTION INSTANCE="sim_clk_gen_0" PORT="sync_rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="D_error_diff" RIGHT="0" SIGIS="undef" SIGNAME="Errorcalc_0_errordiff">
@@ -162,18 +154,18 @@
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="amm" RIGHT="0" SIGIS="undef" SIGNAME="Errorcalc_0_amm">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Deri_0" PORT="diffAmm"/>
             <CONNECTION INSTANCE="Inter_0" PORT="sumAmm"/>
+            <CONNECTION INSTANCE="Deri_0" PORT="diffAmm"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
+        <PORT CLKFREQUENCY="50000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="sim_clk_gen_0_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+            <CONNECTION INSTANCE="sim_clk_gen_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="sim_clk_gen_0_sync_rst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+            <CONNECTION INSTANCE="sim_clk_gen_0" PORT="sync_rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="7" NAME="enablePID" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_enablePID">
@@ -226,14 +218,14 @@
             <CONNECTION INSTANCE="PWM_0" PORT="I_err"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
+        <PORT CLKFREQUENCY="50000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="sim_clk_gen_0_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+            <CONNECTION INSTANCE="sim_clk_gen_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="sim_clk_gen_0_sync_rst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+            <CONNECTION INSTANCE="sim_clk_gen_0" PORT="sync_rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="I_error_sum" RIGHT="0" SIGIS="undef" SIGNAME="Errorcalc_0_errorsum">
@@ -274,14 +266,14 @@
             <CONNECTION INSTANCE="Propor_0" PORT="P_Out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
+        <PORT CLKFREQUENCY="50000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="sim_clk_gen_0_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+            <CONNECTION INSTANCE="sim_clk_gen_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="sim_clk_gen_0_sync_rst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+            <CONNECTION INSTANCE="sim_clk_gen_0" PORT="sync_rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="PWM_sig" SIGIS="undef" SIGNAME="PWM_0_PWM_sig">
@@ -324,14 +316,14 @@
             <CONNECTION INSTANCE="PWM_0" PORT="P_err"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
+        <PORT CLKFREQUENCY="50000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="sim_clk_gen_0_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+            <CONNECTION INSTANCE="sim_clk_gen_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="sim_clk_gen_0_sync_rst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+            <CONNECTION INSTANCE="sim_clk_gen_0" PORT="sync_rst"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -422,7 +414,7 @@
         <PARAMETER NAME="C_OUTCLK_SUM_ROW5" VALUE="no_CLK_OUT5_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW6" VALUE="no_CLK_OUT6_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW7" VALUE="no_CLK_OUT7_output"/>
-        <PARAMETER NAME="C_CLKOUT1_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT1_REQUESTED_OUT_FREQ" VALUE="100"/>
         <PARAMETER NAME="C_CLKOUT2_REQUESTED_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT3_REQUESTED_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT4_REQUESTED_OUT_FREQ" VALUE="100.000"/>
@@ -735,7 +727,7 @@
         <PARAMETER NAME="PSEN_PORT" VALUE="psen"/>
         <PARAMETER NAME="PSINCDEC_PORT" VALUE="psincdec"/>
         <PARAMETER NAME="PSDONE_PORT" VALUE="psdone"/>
-        <PARAMETER NAME="CLKOUT1_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="CLKOUT1_REQUESTED_OUT_FREQ" VALUE="100"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="CLKOUT2_REQUESTED_OUT_FREQ" VALUE="100.000"/>
@@ -927,16 +919,44 @@
             <CONNECTION INSTANCE="External_Ports" PORT="sys_clock"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk"/>
+        <PORT DIR="O" NAME="locked" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="3" FULLNAME="/sim_clk_gen_0" HWVERSION="1.0" INSTANCE="sim_clk_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="sim_clk_gen" VLNV="xilinx.com:ip:sim_clk_gen:1.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=sim_clk_gen;v=v1_0;d=pb054-sim-clk-gen.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="CLOCK_TYPE" VALUE="Single_Ended"/>
+        <PARAMETER NAME="CLOCK_PERIOD" VALUE="20000.0"/>
+        <PARAMETER NAME="INITIAL_RESET_CLOCK_CYCLES" VALUE="100"/>
+        <PARAMETER NAME="CLOCK_CYCLES_BEFORE_SHUTDOWN" VALUE="0"/>
+        <PARAMETER NAME="RESET_POLARITY" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="impl_sim_clk_gen_0_0"/>
+        <PARAMETER NAME="FREQ_HZ" VALUE="50000"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000" DIR="O" NAME="clk" SIGIS="clk" SIGNAME="sim_clk_gen_0_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Errorcalc_0" PORT="clk"/>
-            <CONNECTION INSTANCE="Deri_0" PORT="clk"/>
+            <CONNECTION INSTANCE="PWM_0" PORT="clk"/>
             <CONNECTION INSTANCE="Inter_0" PORT="clk"/>
             <CONNECTION INSTANCE="Propor_0" PORT="clk"/>
-            <CONNECTION INSTANCE="PWM_0" PORT="clk"/>
+            <CONNECTION INSTANCE="Deri_0" PORT="clk"/>
+            <CONNECTION INSTANCE="Errorcalc_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="locked" SIGIS="undef"/>
+        <PORT DIR="O" NAME="sync_rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="sim_clk_gen_0_sync_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PWM_0" PORT="rst"/>
+            <CONNECTION INSTANCE="Inter_0" PORT="rst"/>
+            <CONNECTION INSTANCE="Propor_0" PORT="rst"/>
+            <CONNECTION INSTANCE="Deri_0" PORT="rst"/>
+            <CONNECTION INSTANCE="Errorcalc_0" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>

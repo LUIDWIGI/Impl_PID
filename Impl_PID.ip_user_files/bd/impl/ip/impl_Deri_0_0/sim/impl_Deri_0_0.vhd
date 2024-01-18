@@ -58,11 +58,11 @@ ENTITY impl_Deri_0_0 IS
     D_en : IN STD_LOGIC;
     Kd_num : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     Kd_den : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    D_out : OUT STD_LOGic_vecotr(15 DOWNTO 0);
+    D_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     clk : IN STD_LOGIC;
     rst : IN STD_LOGIC;
-    D_error_diff : IN std_logic_vector(15 DOWNTO 0);
-    diffAmm : IN std_logic_vector(7 DOWNTO 0)
+    D_error_diff : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    diffAmm : IN STD_LOGIC_VECTOR(7 DOWNTO 0)
   );
 END impl_Deri_0_0;
 
@@ -74,11 +74,11 @@ ARCHITECTURE impl_Deri_0_0_arch OF impl_Deri_0_0 IS
       D_en : IN STD_LOGIC;
       Kd_num : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       Kd_den : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-      D_out : OUT std_logic_vector(15 DOWNTO 0);
+      D_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
       clk : IN STD_LOGIC;
       rst : IN STD_LOGIC;
-      D_error_diff : IN std_logic_vector(15 DOWNTO 0);
-      diffAmm : IN std_logic_vector(7 DOWNTO 0)
+      D_error_diff : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      diffAmm : IN STD_LOGIC_VECTOR(7 DOWNTO 0)
     );
   END COMPONENT Deri;
   ATTRIBUTE X_INTERFACE_INFO : STRING;

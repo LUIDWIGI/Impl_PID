@@ -12,11 +12,12 @@
     },
     "design_tree": {
       "clk_wiz": "",
-      "Errorcalc_0": "",
-      "Deri_0": "",
+      "sim_clk_gen_0": "",
+      "PWM_0": "",
       "Inter_0": "",
       "Propor_0": "",
-      "PWM_0": ""
+      "Deri_0": "",
+      "Errorcalc_0": ""
     },
     "ports": {
       "rst": {
@@ -115,123 +116,69 @@
         "xci_path": "ip\\impl_clk_wiz_0\\impl_clk_wiz_0.xci",
         "inst_hier_path": "clk_wiz",
         "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "124.615"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "96.948"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "100"
+          },
           "CLK_IN1_BOARD_INTERFACE": {
             "value": "sys_clock"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "8.000"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "10.000"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "1"
           },
           "USE_BOARD_FLOW": {
             "value": "true"
           }
         }
       },
-      "Errorcalc_0": {
-        "vlnv": "xilinx.com:module_ref:Errorcalc:1.0",
-        "xci_name": "impl_Errorcalc_0_0",
-        "xci_path": "ip\\impl_Errorcalc_0_0\\impl_Errorcalc_0_0.xci",
-        "inst_hier_path": "Errorcalc_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Errorcalc",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "setPoint": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "adcVal": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "error": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "errorsum": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "errordiff": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "amm": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "enablePID": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "D_en": {
-            "direction": "O"
-          },
-          "I_en": {
-            "direction": "O"
-          },
-          "P_en": {
-            "direction": "O"
+      "sim_clk_gen_0": {
+        "vlnv": "xilinx.com:ip:sim_clk_gen:1.0",
+        "xci_name": "impl_sim_clk_gen_0_0",
+        "xci_path": "ip\\impl_sim_clk_gen_0_0\\impl_sim_clk_gen_0_0.xci",
+        "inst_hier_path": "sim_clk_gen_0",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "50000"
           }
         }
       },
-      "Deri_0": {
-        "vlnv": "xilinx.com:module_ref:Deri:1.0",
-        "xci_name": "impl_Deri_0_0",
-        "xci_path": "ip\\impl_Deri_0_0\\impl_Deri_0_0.xci",
-        "inst_hier_path": "Deri_0",
+      "PWM_0": {
+        "vlnv": "xilinx.com:module_ref:PWM:1.0",
+        "xci_name": "impl_PWM_0_0",
+        "xci_path": "ip\\impl_PWM_0_0\\impl_PWM_0_0.xci",
+        "inst_hier_path": "PWM_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "Deri",
+          "ref_name": "PWM",
           "boundary_crc": "0x0"
         },
         "ports": {
-          "D_en": {
-            "direction": "I"
-          },
-          "Kd_num": {
+          "D_err": {
             "direction": "I",
-            "left": "7",
+            "left": "15",
             "right": "0"
           },
-          "Kd_den": {
+          "I_err": {
             "direction": "I",
-            "left": "7",
+            "left": "15",
             "right": "0"
           },
-          "D_out": {
-            "direction": "O",
+          "P_err": {
+            "direction": "I",
             "left": "15",
             "right": "0"
           },
@@ -244,32 +191,27 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
+                "value": "50000",
+                "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
-                "value": "/clk_wiz_clk_out1",
-                "value_src": "ip_prop"
+                "value": "impl_sim_clk_gen_0_0_clk",
+                "value_src": "default_prop"
               }
             }
           },
           "rst": {
             "type": "rst",
-            "direction": "I"
-          },
-          "D_error_diff": {
             "direction": "I",
-            "left": "15",
-            "right": "0"
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
           },
-          "diffAmm": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
+          "PWM_sig": {
+            "direction": "O"
           }
         }
       },
@@ -311,22 +253,24 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
+                "value": "50000",
+                "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
-                "value": "/clk_wiz_clk_out1",
-                "value_src": "ip_prop"
+                "value": "impl_sim_clk_gen_0_0_clk",
+                "value_src": "default_prop"
               }
             }
           },
           "rst": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
           },
           "I_error_sum": {
             "direction": "I",
@@ -383,48 +327,53 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
+                "value": "50000",
+                "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
-                "value": "/clk_wiz_clk_out1",
-                "value_src": "ip_prop"
+                "value": "impl_sim_clk_gen_0_0_clk",
+                "value_src": "default_prop"
               }
             }
           },
           "rst": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
           }
         }
       },
-      "PWM_0": {
-        "vlnv": "xilinx.com:module_ref:PWM:1.0",
-        "xci_name": "impl_PWM_0_0",
-        "xci_path": "ip\\impl_PWM_0_0\\impl_PWM_0_0.xci",
-        "inst_hier_path": "PWM_0",
+      "Deri_0": {
+        "vlnv": "xilinx.com:module_ref:Deri:1.0",
+        "xci_name": "impl_Deri_0_0",
+        "xci_path": "ip\\impl_Deri_0_0\\impl_Deri_0_0.xci",
+        "inst_hier_path": "Deri_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "PWM",
+          "ref_name": "Deri",
           "boundary_crc": "0x0"
         },
         "ports": {
-          "D_err": {
+          "D_en": {
+            "direction": "I"
+          },
+          "Kd_num": {
             "direction": "I",
-            "left": "15",
+            "left": "7",
             "right": "0"
           },
-          "I_err": {
+          "Kd_den": {
             "direction": "I",
-            "left": "15",
+            "left": "7",
             "right": "0"
           },
-          "P_err": {
-            "direction": "I",
+          "D_out": {
+            "direction": "O",
             "left": "15",
             "right": "0"
           },
@@ -437,24 +386,118 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
+                "value": "50000",
+                "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
-                "value": "/clk_wiz_clk_out1",
-                "value_src": "ip_prop"
+                "value": "impl_sim_clk_gen_0_0_clk",
+                "value_src": "default_prop"
               }
             }
           },
           "rst": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
           },
-          "PWM_sig": {
+          "D_error_diff": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "diffAmm": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "Errorcalc_0": {
+        "vlnv": "xilinx.com:module_ref:Errorcalc:1.0",
+        "xci_name": "impl_Errorcalc_0_0",
+        "xci_path": "ip\\impl_Errorcalc_0_0\\impl_Errorcalc_0_0.xci",
+        "inst_hier_path": "Errorcalc_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Errorcalc",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "setPoint": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "adcVal": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "error": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "errorsum": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "errordiff": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "amm": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "50000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "impl_sim_clk_gen_0_0_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "enablePID": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "D_en": {
+            "direction": "O"
+          },
+          "I_en": {
+            "direction": "O"
+          },
+          "P_en": {
             "direction": "O"
           }
         }
@@ -494,8 +537,8 @@
       "Errorcalc_0_amm": {
         "ports": [
           "Errorcalc_0/amm",
-          "Deri_0/diffAmm",
-          "Inter_0/sumAmm"
+          "Inter_0/sumAmm",
+          "Deri_0/diffAmm"
         ]
       },
       "Errorcalc_0_error": {
@@ -570,16 +613,6 @@
           "PWM_0/P_err"
         ]
       },
-      "clk_wiz_0_clk_out1": {
-        "ports": [
-          "clk_wiz/clk_out1",
-          "Errorcalc_0/clk",
-          "Deri_0/clk",
-          "Inter_0/clk",
-          "Propor_0/clk",
-          "PWM_0/clk"
-        ]
-      },
       "enablePID_1": {
         "ports": [
           "enablePID",
@@ -592,20 +625,30 @@
           "clk_wiz/reset"
         ]
       },
-      "rst_1": {
-        "ports": [
-          "rst",
-          "Errorcalc_0/rst",
-          "Deri_0/rst",
-          "Inter_0/rst",
-          "Propor_0/rst",
-          "PWM_0/rst"
-        ]
-      },
       "setPoint_1": {
         "ports": [
           "setPoint",
           "Errorcalc_0/setPoint"
+        ]
+      },
+      "sim_clk_gen_0_clk": {
+        "ports": [
+          "sim_clk_gen_0/clk",
+          "PWM_0/clk",
+          "Inter_0/clk",
+          "Propor_0/clk",
+          "Deri_0/clk",
+          "Errorcalc_0/clk"
+        ]
+      },
+      "sim_clk_gen_0_sync_rst": {
+        "ports": [
+          "sim_clk_gen_0/sync_rst",
+          "PWM_0/rst",
+          "Inter_0/rst",
+          "Propor_0/rst",
+          "Deri_0/rst",
+          "Errorcalc_0/rst"
         ]
       },
       "sys_clock_1": {

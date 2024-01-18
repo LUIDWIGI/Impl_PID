@@ -35,11 +35,11 @@ entity Deri is
     Port ( D_en : in STD_LOGIC;
            Kd_num : in std_logic_vector (7 downto 0);
            Kd_den : in std_logic_vector (7 downto 0);
-           D_out : out unsigned (15 downto 0);
+           D_out : out std_logic_vector (15 downto 0);
            clk : in STD_LOGIC;
            rst : in STD_LOGIC;
-           D_error_diff : in unsigned (15 downto 0);
-           diffAmm : in unsigned (7 downto 0));
+           D_error_diff : in std_logic_vector (15 downto 0);
+           diffAmm : in std_logic_vector (7 downto 0));
 end Deri;
 
 architecture Behavioral of Deri is
@@ -52,9 +52,13 @@ process(clk) begin
 
 if rising_edge(clk) then
 	if D_en = '1' then
-	   numCalc <= unsigned(kd_num) * d_error_diff;
-	   diffCalc <= diffAmm * numCalc;
-		D_out <= resize(diffCalc / unsigned(kd_den), 16);
+	  	numCalc <= unsigned(kd_num) * unsigned(d_error_diff);
+	   	diffCalc <= unsigned(diffAmm) * numCalc;
+	   	if numCalc = 0 OR diffCalc = 0 then
+	   		D_out <= (others => '0');
+	   	else
+			D_out <= std_logic_vector(resize(diffCalc / unsigned(kd_den), 16));
+		end if;
 	else
 		D_out <= "0000000000000000";
 	end if;

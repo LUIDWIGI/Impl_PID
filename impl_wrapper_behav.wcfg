@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="impl_wrapper_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="impl_wrapper" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="999,993 ps"></ZoomStartTime>
+      <ZoomEndTime time="1,000,011 ps"></ZoomEndTime>
+      <Cursor1Time time="1,000,000 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="164"></NameColumnWidth>
+      <ValueColumnWidth column_width="71"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/impl_wrapper/ADC" type="array">
+      <obj_property name="ElementShortName">ADC[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ADC[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="group27" type="group">
+      <obj_property name="label">K_values</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/impl_wrapper/Kd_num" type="array">
+         <obj_property name="ElementShortName">Kd_num[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Kd_num[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/Kd_den" type="array">
+         <obj_property name="ElementShortName">Kd_den[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Kd_den[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/Ki_num" type="array">
+         <obj_property name="ElementShortName">Ki_num[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Ki_num[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/Ki_den" type="array">
+         <obj_property name="ElementShortName">Ki_den[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Ki_den[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/Kp_num" type="array">
+         <obj_property name="ElementShortName">Kp_num[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Kp_num[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/Kp_den" type="array">
+         <obj_property name="ElementShortName">Kp_den[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Kp_den[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/impl_wrapper/PWM" type="logic">
+      <obj_property name="ElementShortName">PWM</obj_property>
+      <obj_property name="ObjectShortName">PWM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/impl_wrapper/enablePID" type="array">
+      <obj_property name="ElementShortName">enablePID[7:0]</obj_property>
+      <obj_property name="ObjectShortName">enablePID[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/impl_wrapper/reset_rtl" type="logic">
+      <obj_property name="ElementShortName">reset_rtl</obj_property>
+      <obj_property name="ObjectShortName">reset_rtl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/impl_wrapper/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/impl_wrapper/setPoint" type="array">
+      <obj_property name="ElementShortName">setPoint[15:0]</obj_property>
+      <obj_property name="ObjectShortName">setPoint[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/impl_wrapper/sys_clock" type="logic">
+      <obj_property name="ElementShortName">sys_clock</obj_property>
+      <obj_property name="ObjectShortName">sys_clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="group71" type="group">
+      <obj_property name="label">ErrorCalc</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/impl_wrapper/impl_i/Errorcalc_0/D_en" type="logic">
+         <obj_property name="ElementShortName">D_en</obj_property>
+         <obj_property name="ObjectShortName">D_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/impl_i/Errorcalc_0/I_en" type="logic">
+         <obj_property name="ElementShortName">I_en</obj_property>
+         <obj_property name="ObjectShortName">I_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/impl_i/Errorcalc_0/P_en" type="logic">
+         <obj_property name="ElementShortName">P_en</obj_property>
+         <obj_property name="ObjectShortName">P_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/impl_i/Errorcalc_0/error" type="array">
+         <obj_property name="ElementShortName">error[15:0]</obj_property>
+         <obj_property name="ObjectShortName">error[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/impl_i/Errorcalc_0/errorsum" type="array">
+         <obj_property name="ElementShortName">errorsum[31:0]</obj_property>
+         <obj_property name="ObjectShortName">errorsum[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/impl_i/Errorcalc_0/errordiff" type="array">
+         <obj_property name="ElementShortName">errordiff[15:0]</obj_property>
+         <obj_property name="ObjectShortName">errordiff[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/impl_i/Errorcalc_0/amm" type="array">
+         <obj_property name="ElementShortName">amm[7:0]</obj_property>
+         <obj_property name="ObjectShortName">amm[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group75" type="group">
+      <obj_property name="label">Deri</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/impl_wrapper/impl_i/Deri_0/D_out" type="array">
+         <obj_property name="ElementShortName">D_out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">D_out[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/impl_i/Deri_0/D_error_diff" type="array">
+         <obj_property name="ElementShortName">D_error_diff[15:0]</obj_property>
+         <obj_property name="ObjectShortName">D_error_diff[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/impl_i/Deri_0/diffAmm" type="array">
+         <obj_property name="ElementShortName">diffAmm[7:0]</obj_property>
+         <obj_property name="ObjectShortName">diffAmm[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group79" type="group">
+      <obj_property name="label">Inter</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/impl_wrapper/impl_i/Inter_0/I_out" type="array">
+         <obj_property name="ElementShortName">I_out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">I_out[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/impl_i/Inter_0/I_error_sum" type="array">
+         <obj_property name="ElementShortName">I_error_sum[31:0]</obj_property>
+         <obj_property name="ObjectShortName">I_error_sum[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/impl_i/Inter_0/sumAmm" type="array">
+         <obj_property name="ElementShortName">sumAmm[7:0]</obj_property>
+         <obj_property name="ObjectShortName">sumAmm[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group82" type="group">
+      <obj_property name="label">Propor</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/impl_wrapper/impl_i/Propor_0/P_Out" type="array">
+         <obj_property name="ElementShortName">P_Out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">P_Out[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/impl_wrapper/impl_i/Propor_0/P_Error" type="array">
+         <obj_property name="ElementShortName">P_Error[15:0]</obj_property>
+         <obj_property name="ObjectShortName">P_Error[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

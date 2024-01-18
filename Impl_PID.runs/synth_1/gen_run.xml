@@ -88,10 +88,10 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="impl_Deri_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="impl_PWM_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="impl_Deri_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="impl_clk_wiz_0"/>
   <BlockFileSet Type="BlockSrcs" Name="impl_Errorcalc_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="impl_Inter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="impl_Propor_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="impl_Inter_0_0"/>
 </GenRun>

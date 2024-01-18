@@ -35,11 +35,11 @@ entity Inter is
     Port ( I_en : in STD_LOGIC;
            Ki_num : in std_logic_vector (7 downto 0);
            Ki_den : in std_logic_vector (7 downto 0);
-           I_out : out unsigned (15 downto 0);
+           I_out : out std_logic_vector (15 downto 0);
            clk : in STD_LOGIC;
            rst : in STD_LOGIC;
-           I_error_sum : in unsigned(31 downto 0);
-           sumAmm : in unsigned(7 downto 0));
+           I_error_sum : in std_logic_vector(31 downto 0);
+           sumAmm : in std_logic_vector(7 downto 0));
 end Inter;
 
 architecture Behavioral of Inter is
@@ -51,9 +51,13 @@ begin
 process(clk) begin
 if rising_edge(clk) then
     if I_en = '1' then
-        numCalc <= unsigned(ki_num) * I_error_sum;
-        denCalc <= sumAmm * unsigned(ki_den);
-        I_out <= resize(numCalc / denCalc, 16);
+        numCalc <= unsigned(ki_num) * unsigned(I_error_sum);
+        denCalc <= unsigned(sumAmm) * unsigned(ki_den);
+        if numCalc = 0 OR denCalc = 0 then
+        	I_out <= (others => '0');
+        else
+        	I_out <= std_logic_vector(resize(numCalc / denCalc, 16));
+        end if;
     else
     	I_out <= "0000000000000000";    
     end if;

@@ -1,5 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Fontys/Impl_PID/Impl_PID.ip_user_files/bd/impl/ip/impl_Deri_0_0/sim/impl_Deri_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'impl_Deri_0_0'
-ERROR: [VRFC 10-2989] 'std_logic_vecotr' is not declared [C:/Fontys/Impl_PID/Impl_PID.ip_user_files/bd/impl/ip/impl_Deri_0_0/sim/impl_Deri_0_0.vhd:61]
-ERROR: [VRFC 10-9458] unit 'impl_deri_0_0' is ignored due to previous errors [C:/Fontys/Impl_PID/Impl_PID.ip_user_files/bd/impl/ip/impl_Deri_0_0/sim/impl_Deri_0_0.vhd:56]
-INFO: [VRFC 10-8704] VHDL file 'C:/Fontys/Impl_PID/Impl_PID.ip_user_files/bd/impl/ip/impl_Deri_0_0/sim/impl_Deri_0_0.vhd' is ignored due to errors
