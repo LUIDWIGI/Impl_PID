@@ -68,20 +68,20 @@ if rising_edge(clk) then
 			errordiff_b <= error_b - olderror_s;
 			olderror_b <= error_b;
 			olderror_s <= olderror_b;
+			amm_b <= amm_b + 1;
+			amm <= std_logic_vector(amm_b);
 			error <= std_logic_vector(error_b);
 			errorsum <= std_logic_vector(errorsum_b);
 			errordiff <= std_logic_vector(errordiff_b);
 		elsif amm_b = accumtime then
-			error_b <= (others => '0'); --"0000000000000000";
 			errordiff_b <= "0000000000000000";
-			olderror_b <= "0000000000000000";
-			olderror_s <= "0000000000000000";
-			error <= "0000000000000000";
 			errordiff <= "0000000000000000";
 			errorsum_b <= "00000000000000000000000000000000";
 			errorsum <= "00000000000000000000000000000000";
 			amm_b <= "00000001";
 			amm <= "00000001";
+			error <= std_logic_vector(error_b);
+
 		end if;
 	end if;
 	case enablePID is

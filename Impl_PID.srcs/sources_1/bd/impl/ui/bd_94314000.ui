@@ -1,60 +1,59 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-387,-99",
-   "DisplayMarkDebug":"0",
+   "Default View_ScaleFactor":"1.45008",
+   "Default View_TopLeft":"-160,48",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port port-id_rst -pg 1 -lvl 0 -x -30 -y 430 -defaultsOSRD
-preplace port port-id_PWM -pg 1 -lvl 5 -x 1180 -y 440 -defaultsOSRD
-preplace port port-id_sys_clock -pg 1 -lvl 0 -x -30 -y 190 -defaultsOSRD
-preplace port port-id_reset_rtl -pg 1 -lvl 0 -x -30 -y 160 -defaultsOSRD
-preplace portBus setPoint -pg 1 -lvl 0 -x -30 -y 340 -defaultsOSRD
-preplace portBus Kd_num -pg 1 -lvl 0 -x -30 -y 70 -defaultsOSRD
-preplace portBus Kd_den -pg 1 -lvl 0 -x -30 -y 100 -defaultsOSRD
-preplace portBus Ki_num -pg 1 -lvl 0 -x -30 -y 260 -defaultsOSRD
-preplace portBus Ki_den -pg 1 -lvl 0 -x -30 -y 290 -defaultsOSRD
-preplace portBus ADC -pg 1 -lvl 0 -x -30 -y 370 -defaultsOSRD
-preplace portBus Kp_num -pg 1 -lvl 0 -x -30 -y 550 -defaultsOSRD
-preplace portBus Kp_den -pg 1 -lvl 0 -x -30 -y 580 -defaultsOSRD
-preplace portBus enablePID -pg 1 -lvl 0 -x -30 -y 460 -defaultsOSRD
-preplace inst clk_wiz -pg 1 -lvl 2 -x 390 -y 170 -defaultsOSRD
-preplace inst sim_clk_gen_0 -pg 1 -lvl 1 -x 100 -y 0 -defaultsOSRD
-preplace inst PWM_0 -pg 1 -lvl 4 -x 1040 -y 440 -defaultsOSRD
-preplace inst Inter_0 -pg 1 -lvl 3 -x 760 -y 340 -defaultsOSRD
-preplace inst Propor_0 -pg 1 -lvl 3 -x 760 -y 590 -defaultsOSRD
-preplace inst Deri_0 -pg 1 -lvl 3 -x 760 -y 120 -defaultsOSRD
-preplace inst Errorcalc_0 -pg 1 -lvl 2 -x 390 -y 420 -defaultsOSRD
-preplace netloc ADC_1 1 0 2 NJ 370 200
-preplace netloc Deri_0_D_out 1 3 1 910 120n
-preplace netloc Errorcalc_0_D_en 1 2 1 540 60n
-preplace netloc Errorcalc_0_I_en 1 2 1 550 280n
-preplace netloc Errorcalc_0_P_en 1 2 1 540 480n
-preplace netloc Errorcalc_0_amm 1 2 1 580 180n
-preplace netloc Errorcalc_0_error 1 2 1 560 360n
-preplace netloc Errorcalc_0_errordiff 1 2 1 570 160n
-preplace netloc Errorcalc_0_errorsum 1 2 1 N 380
-preplace netloc Inter_0_I_out 1 3 1 900 340n
-preplace netloc Kd_den_1 1 0 3 NJ 100 N 100 NJ
-preplace netloc Kd_num_1 1 0 3 NJ 70 240 80 NJ
-preplace netloc Ki_den_1 1 0 3 NJ 290 N 290 590J
-preplace netloc Ki_num_1 1 0 3 NJ 260 N 260 620J
-preplace netloc Kp_den_1 1 0 3 NJ 580 N 580 NJ
-preplace netloc Kp_num_1 1 0 3 NJ 550 220 560 NJ
-preplace netloc PWM_0_PWM_sig 1 4 1 N 440
-preplace netloc Propor_0_P_Out 1 3 1 910 440n
-preplace netloc enablePID_1 1 0 2 N 460 N
-preplace netloc reset_rtl_1 1 0 2 NJ 160 N
-preplace netloc setPoint_1 1 0 2 NJ 340 220
-preplace netloc sys_clock_1 1 0 2 NJ 190 220
-preplace netloc sim_clk_gen_0_sync_rst 1 1 3 210 250 610 480 N
-preplace netloc sim_clk_gen_0_clk 1 1 3 230J 240 600J 460 N
-levelinfo -pg 1 -30 100 390 760 1040 1180
-pagesize -pg 1 -db -bbox -sgen -180 -110 1270 700
+preplace port port-id_PWM -pg 1 -lvl 6 -x 1480 -y 440 -defaultsOSRD
+preplace port port-id_reset_rtl -pg 1 -lvl 0 -x -20 -y 230 -defaultsOSRD
+preplace port port-id_clock_rtl -pg 1 -lvl 0 -x -20 -y 310 -defaultsOSRD
+preplace portBus Kp_den -pg 1 -lvl 0 -x -20 -y 600 -defaultsOSRD
+preplace portBus Kp_num -pg 1 -lvl 0 -x -20 -y 570 -defaultsOSRD
+preplace portBus Ki_den -pg 1 -lvl 0 -x -20 -y 160 -defaultsOSRD
+preplace portBus enablePID -pg 1 -lvl 0 -x -20 -y 460 -defaultsOSRD
+preplace portBus ADC -pg 1 -lvl 0 -x -20 -y 400 -defaultsOSRD
+preplace portBus setPoint -pg 1 -lvl 0 -x -20 -y 370 -defaultsOSRD
+preplace portBus Ki_num -pg 1 -lvl 0 -x -20 -y 130 -defaultsOSRD
+preplace portBus Kd_den -pg 1 -lvl 0 -x -20 -y 100 -defaultsOSRD
+preplace portBus Kd_num -pg 1 -lvl 0 -x -20 -y 70 -defaultsOSRD
+preplace inst Inter_0 -pg 1 -lvl 4 -x 1070 -y 340 -defaultsOSRD
+preplace inst Propor_0 -pg 1 -lvl 4 -x 1070 -y 610 -defaultsOSRD
+preplace inst Deri_0 -pg 1 -lvl 4 -x 1070 -y 120 -defaultsOSRD
+preplace inst PWM_0 -pg 1 -lvl 5 -x 1340 -y 440 -defaultsOSRD
+preplace inst Errorcalc_0 -pg 1 -lvl 3 -x 710 -y 420 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -x 110 -y 300 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 2 -x 380 -y 270 -defaultsOSRD
+preplace netloc Deri_0_D_out 1 4 1 1220 120n
+preplace netloc Errorcalc_0_D_en 1 3 1 870 60n
+preplace netloc Errorcalc_0_I_en 1 3 1 850 280n
+preplace netloc Errorcalc_0_P_en 1 3 1 850 480n
+preplace netloc Errorcalc_0_amm 1 3 1 900 180n
+preplace netloc Errorcalc_0_error 1 3 1 860 360n
+preplace netloc Errorcalc_0_errordiff 1 3 1 890 160n
+preplace netloc Errorcalc_0_errorsum 1 3 1 N 380
+preplace netloc Inter_0_I_out 1 4 1 1210 340n
+preplace netloc PWM_0_PWM_sig 1 5 1 N 440
+preplace netloc Propor_0_P_Out 1 4 1 1220 440n
+preplace netloc clk_wiz_clk_out1 1 1 4 210 170 570 170 910 460 NJ
+preplace netloc clk_wiz_locked 1 1 1 N 310
+preplace netloc rst_clk_wiz_100M_peripheral_reset 1 2 3 550 270 920 480 NJ
+preplace netloc reset_rtl_1 1 0 2 0 230 200
+preplace netloc Kp_den_1 1 0 4 NJ 600 NJ 600 NJ 600 NJ
+preplace netloc Kp_num_1 1 0 4 0J 580 NJ 580 NJ 580 NJ
+preplace netloc Ki_den_1 1 0 4 NJ 160 NJ 160 NJ 160 880J
+preplace netloc enablePID_1 1 0 3 NJ 460 NJ 460 NJ
+preplace netloc ADC_1 1 0 3 NJ 400 NJ 400 NJ
+preplace netloc setPoint_1 1 0 3 NJ 370 NJ 370 560J
+preplace netloc Ki_num_1 1 0 4 NJ 130 NJ 130 NJ 130 930J
+preplace netloc Kd_den_1 1 0 4 NJ 100 NJ 100 NJ 100 NJ
+preplace netloc Kd_num_1 1 0 4 NJ 70 NJ 70 NJ 70 930J
+preplace netloc clock_rtl_1 1 0 1 N 310
+levelinfo -pg 1 -20 110 380 710 1070 1340 1480
+pagesize -pg 1 -db -bbox -sgen -160 -20 1570 720
 "
 }
 {
-   "da_board_cnt":"2",
-   "da_clkrst_cnt":"10"
+   "da_board_cnt":"9",
+   "da_clkrst_cnt":"28"
 }

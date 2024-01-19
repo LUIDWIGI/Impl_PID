@@ -1,8 +1,8 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Thu Jan 18 10:53:36 2024
---Host        : favorietedikzak running 64-bit major release  (build 9200)
+--Date        : Fri Jan 19 10:05:56 2024
+--Host        : aSUS-G14-Jordi running 64-bit major release  (build 9200)
 --Command     : generate_target impl.bd
 --Design      : impl
 --Purpose     : IP block netlist
@@ -42,34 +42,12 @@ architecture STRUCTURE of impl is
     locked : out STD_LOGIC
   );
   end component impl_clk_wiz_0;
-  component impl_Deri_0_0 is
+  component impl_sim_clk_gen_0_0 is
   port (
-    D_en : in STD_LOGIC;
-    Kd_num : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Kd_den : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    D_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    clk : in STD_LOGIC;
-    rst : in STD_LOGIC;
-    D_error_diff : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    diffAmm : in STD_LOGIC_VECTOR ( 7 downto 0 )
+    clk : out STD_LOGIC;
+    sync_rst : out STD_LOGIC
   );
-  end component impl_Deri_0_0;
-  component impl_Errorcalc_0_0 is
-  port (
-    setPoint : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    adcVal : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    error : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    errorsum : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    errordiff : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    amm : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    clk : in STD_LOGIC;
-    rst : in STD_LOGIC;
-    enablePID : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    D_en : out STD_LOGIC;
-    I_en : out STD_LOGIC;
-    P_en : out STD_LOGIC
-  );
-  end component impl_Errorcalc_0_0;
+  end component impl_sim_clk_gen_0_0;
   component impl_Inter_0_0 is
   port (
     I_en : in STD_LOGIC;
@@ -93,12 +71,18 @@ architecture STRUCTURE of impl is
     rst : in STD_LOGIC
   );
   end component impl_Propor_0_0;
-  component impl_sim_clk_gen_0_0 is
+  component impl_Deri_0_0 is
   port (
-    clk : out STD_LOGIC;
-    sync_rst : out STD_LOGIC
+    D_en : in STD_LOGIC;
+    Kd_num : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Kd_den : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    D_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    clk : in STD_LOGIC;
+    rst : in STD_LOGIC;
+    D_error_diff : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    diffAmm : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  end component impl_sim_clk_gen_0_0;
+  end component impl_Deri_0_0;
   component impl_PWM_0_0 is
   port (
     D_err : in STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -109,6 +93,22 @@ architecture STRUCTURE of impl is
     PWM_sig : out STD_LOGIC
   );
   end component impl_PWM_0_0;
+  component impl_Errorcalc_0_0 is
+  port (
+    setPoint : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    adcVal : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    error : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    errorsum : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    errordiff : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    amm : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    clk : in STD_LOGIC;
+    rst : in STD_LOGIC;
+    enablePID : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    D_en : out STD_LOGIC;
+    I_en : out STD_LOGIC;
+    P_en : out STD_LOGIC
+  );
+  end component impl_Errorcalc_0_0;
   signal ADC_1 : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal Deri_0_D_out : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal Errorcalc_0_D_en : STD_LOGIC;

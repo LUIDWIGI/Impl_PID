@@ -95,9 +95,12 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib C:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/hdl/impl_wrapper.vhd
 add_files C:/Fontys/Impl_PID/Impl_PID.srcs/sources_1/bd/impl/impl.bd
-set_property used_in_implementation false [get_files -all c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_clk_wiz_8/impl_clk_wiz_8_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_clk_wiz_8/impl_clk_wiz_8.xdc]
+set_property used_in_implementation false [get_files -all c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_clk_wiz_8/impl_clk_wiz_8_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_rst_clk_wiz_100M_0/impl_rst_clk_wiz_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_rst_clk_wiz_100M_0/impl_rst_clk_wiz_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/ip/impl_rst_clk_wiz_100M_0/impl_rst_clk_wiz_100M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Fontys/Impl_PID/Impl_PID.gen/sources_1/bd/impl/impl_ooc.xdc]
 
 OPTRACE "Adding files" END { }
