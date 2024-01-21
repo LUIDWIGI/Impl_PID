@@ -1,6 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Fontys/Impl_PID/Impl_PID.ip_user_files/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0_clk_wiz.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module impl_clk_wiz_0_clk_wiz
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Fontys/Impl_PID/Impl_PID.ip_user_files/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module impl_clk_wiz_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Fontys/Impl_PID/Impl_PID.ip_user_files/bd/impl/ip/impl_sim_clk_gen_0_0/sim/impl_sim_clk_gen_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module impl_sim_clk_gen_0_0

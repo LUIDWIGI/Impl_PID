@@ -33,8 +33,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity PWM is
 	Generic (
-	sys_clk : integer := 125_000_000;
-	pwm_freq : integer := 100_000;
+	sys_clk : integer := 100_000_000;
+	pwm_freq : integer := 10_000;
 	bits_resolution : integer := 12);
 	
     Port ( D_err : in std_logic_vector (15 downto 0);
@@ -52,7 +52,7 @@ signal counter: integer range 0 to period-1 := 0;
 signal halfDuty: integer range 0 to period/2;
 signal toterror: integer := 0;
 signal pwmerror: integer := 0;
-signal isRising: STD_LOGIC := '0';
+signal isRising: STD_LOGIC := '1';
 
 begin
 process(clk) begin
@@ -69,23 +69,23 @@ if rising_edge(clk) then
 		
 	
 	if (counter = 0) then
-		counter <= halfduty - 1;
-		if isRising = '1' then
-			pwm_sig <= '0';
-			isRising <= '0';
-		else
-			pwm_sig <= '1';
-			isRising <= '1';
-		end if;
+		counter <= period - 1;
 	else
 		counter <= counter - 1;
 	end if;
 	
 	halfduty <= pwmerror * period / (2**bits_resolution) / 2;
 	
+	if (counter = halfduty) then
+	   PWM_SIG <= '0';
+	elsif (counter = period - halfduty) then
+	   PWM_SIG <= '1';
+	end if;
+	
 	if (rst = '1') then
 		counter <= 0;
 		PWM_sig <= '0';
+		isRising <= '1';
 	end if;
 end if;
 end process;

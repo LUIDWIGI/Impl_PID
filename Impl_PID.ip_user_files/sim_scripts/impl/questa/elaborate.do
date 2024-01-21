@@ -1,1 +1,1 @@
-vopt +acc=npr -l elaborate.log  -L xil_defaultlib -L xpm -L sim_clk_gen_v1_0_3 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.impl xil_defaultlib.glbl -o impl_opt
+vopt +acc=npr -l elaborate.log  -L xil_defaultlib -L xpm -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L sim_clk_gen_v1_0_3 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.impl xil_defaultlib.glbl -o impl_opt

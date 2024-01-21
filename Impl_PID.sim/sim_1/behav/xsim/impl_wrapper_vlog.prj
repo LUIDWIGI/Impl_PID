@@ -1,7 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  --include "../../../../Impl_PID.gen/sources_1/bd/impl/ipshared/7698" \
-"../../../../Impl_PID.ip_user_files/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0_clk_wiz.v" \
-"../../../../Impl_PID.ip_user_files/bd/impl/ip/impl_clk_wiz_0/impl_clk_wiz_0.v" \
+"../../../../Impl_PID.ip_user_files/bd/impl/ip/impl_clk_wiz_8/impl_clk_wiz_8_clk_wiz.v" \
+"../../../../Impl_PID.ip_user_files/bd/impl/ip/impl_clk_wiz_8/impl_clk_wiz_8.v" \
 "../../../../Impl_PID.ip_user_files/bd/impl/ip/impl_sim_clk_gen_0_0/sim/impl_sim_clk_gen_0_0.v" \
 
 # compile glbl module
