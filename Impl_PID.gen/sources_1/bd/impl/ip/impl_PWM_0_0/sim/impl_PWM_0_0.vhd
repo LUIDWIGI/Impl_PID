@@ -92,7 +92,7 @@ BEGIN
   U0 : PWM
     GENERIC MAP (
       sys_clk => 100000000,
-      pwm_freq => 10000,
+      pwm_freq => 25000,
       bits_resolution => 12
     )
     PORT MAP (

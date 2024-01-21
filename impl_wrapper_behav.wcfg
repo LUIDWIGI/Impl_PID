@@ -11,15 +11,22 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="999,974 ps"></ZoomStartTime>
-      <ZoomEndTime time="1,000,002 ps"></ZoomEndTime>
-      <Cursor1Time time="1,000,000 ps"></Cursor1Time>
+      <ZoomStartTime time="348.198793 us"></ZoomStartTime>
+      <ZoomEndTime time="369.098794 us"></ZoomEndTime>
+      <Cursor1Time time="365.005000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="133"></NameColumnWidth>
+      <NameColumnWidth column_width="121"></NameColumnWidth>
       <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="12" />
+   <wave_markers>
+      <marker time="250920260" label="" />
+      <marker time="325005000" label="" />
+      <marker time="317025000" label="" />
+      <marker time="401515000" label="" />
+      <marker time="357025000" label="" />
+   </wave_markers>
    <wvobject fp_name="/impl_wrapper/ADC" type="array">
       <obj_property name="ElementShortName">ADC[15:0]</obj_property>
       <obj_property name="ObjectShortName">ADC[15:0]</obj_property>

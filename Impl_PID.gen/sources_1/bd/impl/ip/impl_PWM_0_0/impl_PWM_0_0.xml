@@ -137,7 +137,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:eda96232</spirit:value>
+            <spirit:value>9:ed2f1d3b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -153,11 +153,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Jan 21 13:40:04 UTC 2024</spirit:value>
+            <spirit:value>Sun Jan 21 17:47:06 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:eda96232</spirit:value>
+            <spirit:value>9:ed2f1d3b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -257,7 +257,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>pwm_freq</spirit:name>
         <spirit:displayName>Pwm Freq</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.pwm_freq">10000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.pwm_freq">25000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>bits_resolution</spirit:name>
@@ -286,7 +286,7 @@
     <spirit:parameter>
       <spirit:name>pwm_freq</spirit:name>
       <spirit:displayName>Pwm Freq</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.pwm_freq">10000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.pwm_freq">25000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>bits_resolution</spirit:name>

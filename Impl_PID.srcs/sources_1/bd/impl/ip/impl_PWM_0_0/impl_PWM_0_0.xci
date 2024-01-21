@@ -9,13 +9,13 @@
     "parameters": {
       "component_parameters": {
         "sys_clk": [ { "value": "100000000", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "pwm_freq": [ { "value": "10000", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "pwm_freq": [ { "value": "25000", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "bits_resolution": [ { "value": "12", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "impl_PWM_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
         "sys_clk": [ { "value": "100000000", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "pwm_freq": [ { "value": "10000", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "pwm_freq": [ { "value": "25000", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "bits_resolution": [ { "value": "12", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {

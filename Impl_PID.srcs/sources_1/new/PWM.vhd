@@ -34,7 +34,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity PWM is
 	Generic (
 	sys_clk : integer := 100_000_000;
-	pwm_freq : integer := 10_000;
+	pwm_freq : integer := 25_000;
 	bits_resolution : integer := 12);
 	
     Port ( D_err : in std_logic_vector (15 downto 0);
@@ -77,9 +77,9 @@ if rising_edge(clk) then
 	halfduty <= pwmerror * period / (2**bits_resolution) / 2;
 	
 	if (counter = halfduty) then
-	   PWM_SIG <= '0';
-	elsif (counter = period - halfduty) then
 	   PWM_SIG <= '1';
+	elsif (counter = period - halfduty) then
+	   PWM_SIG <= '0';
 	end if;
 	
 	if (rst = '1') then
